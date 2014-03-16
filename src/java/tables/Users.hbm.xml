@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="tables.Users" table="users" catalog="mobilesdb">
+        <id name="idusers" type="java.lang.Integer">
+            <column name="idusers" />
+            <generator class="identity" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="45" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="45" />
+        </property>
+        <property name="userType" type="string">
+            <column name="user_type" length="45" not-null="true" />
+        </property>
+        <property name="isActive" type="string">
+            <column name="isActive" length="45" not-null="true" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="birthday" length="45" />
+        </property>
+        <property name="job" type="string">
+            <column name="job" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" not-null="true" />
+        </property>
+        <property name="userscol" type="string">
+            <column name="userscol" length="45" />
+        </property>
+        <property name="credit" type="int">
+            <column name="credit" not-null="true" />
+        </property>
+        <set name="userInterests" inverse="true">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="tables.UserInterest" />
+        </set>
+    </class>
+</hibernate-mapping>

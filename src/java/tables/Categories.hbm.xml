@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="tables.Categories" table="categories" catalog="mobilesdb">
+        <id name="idCategories" type="java.lang.Integer">
+            <column name="idCategories" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="logo" type="string">
+            <column name="logo" length="45" not-null="true" />
+        </property>
+        <set name="productses" inverse="true">
+            <key>
+                <column name="category_id" not-null="true" />
+            </key>
+            <one-to-many class="tables.Products" />
+        </set>
+    </class>
+</hibernate-mapping>

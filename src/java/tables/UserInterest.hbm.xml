@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="tables.UserInterest" table="user_interest" catalog="mobilesdb">
+        <id name="iduserInterest" type="java.lang.Integer">
+            <column name="iduser_interest" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="users" class="tables.Users" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <property name="interestName" type="string">
+            <column name="interest_name" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

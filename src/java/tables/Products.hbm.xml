@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="tables.Products" table="products" catalog="mobilesdb">
+        <id name="idProducts" type="java.lang.Integer">
+            <column name="idProducts" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="categories" class="tables.Categories" fetch="select">
+            <column name="category_id" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" length="45" not-null="true" />
+        </property>
+        <property name="img" type="string">
+            <column name="img" length="45" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+        <property name="price" type="int">
+            <column name="price" not-null="true" />
+        </property>
+        <property name="platform" type="string">
+            <column name="platform" length="45" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
