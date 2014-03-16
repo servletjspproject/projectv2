@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 <title>The Fooseshoes Website Template | Contact :: w3layouts</title>
-<meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -93,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</nav>
 	<div class="header_right">
 		<ul>
-			<li><a href="my_products.html"><i  class="cart"></i><span>0</span></a></li>
+			<li><a href="#"><i  class="cart"></i><span>0</span></a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>
@@ -103,7 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="top_bg">
 <div class="wrap">
 <div class="main_top">
-	<h2 class="style">Contact us</h2>
+	<h2 class="style">Profile</h2>
 </div>
 </div>
 </div>
@@ -114,48 +114,92 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="contact">				
 				<div class="contact_left">
 					<div class="contact_info">
-			    	 	<h3>Find Us Here</h3>
+			    	 	<h3></h3>
 			    	 		<div class="map">
-					   			<iframe width="100%" height="175" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265&amp;output=embed"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#242424;text-shadow:0 1px 0 #ffffff; text-align:left;font-size:12px;padding: 5px;">View Larger Map</a></small>
+								<img src="images/profile.png" alt=""></br>
 					   		</div>
       				</div>
       			<div class="company_address">
-				     	<h3>Company Information :</h3>
-						    	<p>500 Lorem Ipsum Dolor Sit,</p>
-						   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-						   		<p>USA</p>
-				   		<p>Phone:(00) 222 666 444</p>
-				   		<p>Fax: (000) 000 00 00 0</p>
-				 	 	<p>Email: <a href="mailto:info@mycompany.com">info(at)mycompany.com</a></p>
-				   		<p>Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
 				   </div>
 				</div>				
 				<div class="contact_right">
 				  <div class="contact-form">
-				  	<h3>Contact Us</h3>
-					    <form method="post" action="Contact"><!--Contact-->
+				  	<h3>Profile Information</h3>
+					    <form method="post" action="contact-post.html">
 					    	<div>
-						    	<span><label>NAME</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
+						    	<span><label>FNAME</label></span>
+						    	<span>
+						<input id="fn" name="userNameProfile" type="text" class="textbox" readOnly="true">
+<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;">
+								</span>
+						    </div>
+							<div>
+						    	<span><label>LNAME</label></span>
+						    	<span>
+									<input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('ln').readOnly=false;">
+								</span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
-						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    	<span>
+									<input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('em').readOnly=false;">
+								</span>
 						    </div>
 						    <div>
 						     	<span><label>MOBILE</label></span>
-						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    	<span>
+									<input id="mo" name="userPhoneProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('mo').readOnly=false;">
+								</span>
 						    </div>
 						    <div>
-						     	<span><label>TITLE</label></span>
-						    	<span><input name="title" type="text" class="textbox"></span>
+						     	<span><label>Address</label></span>
+						    	<span>
+									<input id="add" name="addressProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('add').readOnly=false;">
+								</span>
 						    </div>
-						    <div>
-						    	<span><label>SUBJECT</label></span>
-						    	<span><textarea name="userMsg"> </textarea></span>
+							<div>
+						    	<span><label>JOB</label></span>
+						    	<span>
+									<input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('jo').readOnly=false;">
+								</span>
 						    </div>
+							<div>
+						    	<span><label>CreditBalance</label></span>
+						    	<span>
+									<input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('cr').readOnly=false;">
+								</span>
+						    </div>
+							<div>
+						    	<span><label>password</label></span>
+								<span>
+									<input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('pa').readOnly=false;">
+								</span>
+						    </div>							
+				<div>
+					<label>
+
+					<input type="checkbox" name="interests" value="Heals">Heals<br>
+						<input type="checkbox" name="interests" value="Sandels">Sandels<br>
+						<input type="checkbox" name="interests" value="Boots">Boots<br>
+						<input type="checkbox" name="interests" value="Slippers">Slippers<br>
+						<input type="checkbox" name="interests" value="Flat">Flat<br>
+						<input type="checkbox" name="interests" value="New Comers">New Comers<br>
+						
+					</label>
+
+					</div>
 						   <div>
-						   		<span><input type="submit" value="submit us"></span>
+						   		<span>
+									<input type="submit" value="Save">
+									<input type="button" value="Cansel">
+								</span>
 						  </div>
 					    </form>
 				    </div>
@@ -165,25 +209,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 </div>
 </div>
-
 <!-- start footer -->
 <div class="footer_mid">
 <div class="wrap">
 <div class="footer">
-
-	<div class="soc_icons">
-			<ul>
-				<li><a class="icon1" href="#"></a></li>
-				<li><a class="icon2" href="#"></a></li>
-				<li><a class="icon3" href="#"></a></li>
-				<li><a class="icon4" href="#"></a></li>
-				<li><a class="icon5" href="#"></a></li>
-			</ul>	
-	</div>
-	<div class="clear"></div>
-</div>
-</div>
-</div>
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">
@@ -215,7 +244,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a href="#">Contact us</a></li>
 		</ul>
 		</div>
-
 	<div class="clear"></div>
 </div>
 </div>

@@ -16,6 +16,11 @@ import javax.servlet.http.HttpServletResponse;
  * @author abdotalaat
  */
 public class Contact extends HttpServlet {
+String name;
+String mail;
+String mobile;
+String title;
+String subject;
 
     /**
      * Processes requests for both HTTP
@@ -29,8 +34,19 @@ public class Contact extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
+  /***************************************get parameters****************************************************************/      
+            name = request.getParameter("userName");
+            mail = request.getParameter("userEmail");
+             mobile = request.getParameter("userPhone");
+             title = request.getParameter("userEmail");
+             subject = request.getParameter("userMsg");
+    /********************************************************************************************************************/      
+
         try {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -40,6 +56,14 @@ public class Contact extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Contact at " + request.getContextPath() + "</h1>");
+            
+            
+
+             
+            
+            
+            
+            
             out.println("</body>");
             out.println("</html>");
         } finally {            
