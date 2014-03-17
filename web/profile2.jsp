@@ -1,3 +1,4 @@
+<%@page import="tables.Users"%>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
@@ -125,25 +126,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="contact_right">
 				  <div class="contact-form">
 				  	<h3>Profile Information</h3>
-					    <form method="post" action="contact-post.html">
+					    <form method="post" action="">
+						
+						
+						
+						
+	<!--**********************************************Bean Code*********************************************************-->	
+		<jsp:useBean id="UsersBean" scope="session" class="tables.Users"/>
+		
+		<!--value=${session.UsersBean.lname}-->
+		<!--value=${sessionScope.UsersBean.lname}-->
+             
+		<!--             el code da haytshal lma farida t7ot codha this is just example                                 -->
+		<%
+		UsersBean.setAddress("my add");
+		UsersBean.setEmail("my mail");
+		UsersBean.setFname("tasneem");
+		UsersBean.setLname("ibraheem");
+													
+		//HttpSession session = request.getSession(true); 
+		//session.setAttribute("sessionBean", UsersBean); 
+		
+		%>
+
+	<!--***************************************************************************************************************-->						
 					    	<div>
 						    	<span><label>FNAME</label></span>
 						    	<span>
-						<input id="fn" name="userNameProfile" type="text" class="textbox" readOnly="true">
-<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;">
+                                <input id="fn" name="userNameProfile" type="text" class="textbox" value=<jsp:getProperty name="UsersBean" property="fname" /> readOnly="true">
+								
+								<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;">
 								</span>
 						    </div>
 							<div>
 						    	<span><label>LNAME</label></span>
 						    	<span>
-									<input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true">
+	<input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="lname" />>
 									<input type="button" value="Edit" onclick="document.getElementById('ln').readOnly=false;">
 								</span>
 						    </div>
 						    <div>
 						    	<span><label>E-MAIL</label></span>
 						    	<span>
-									<input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true">
+	<input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="email" />>
 									<input type="button" value="Edit" onclick="document.getElementById('em').readOnly=false;">
 								</span>
 						    </div>
@@ -157,28 +182,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    <div>
 						     	<span><label>Address</label></span>
 						    	<span>
-									<input id="add" name="addressProfile" type="text" class="textbox" readOnly="true">
+									<input id="add" name="addressProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="address"/>>
 									<input type="button" value="Edit" onclick="document.getElementById('add').readOnly=false;">
 								</span>
 						    </div>
 							<div>
 						    	<span><label>JOB</label></span>
 						    	<span>
-									<input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true">
+									<input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="job"/>>
 									<input type="button" value="Edit" onclick="document.getElementById('jo').readOnly=false;">
 								</span>
 						    </div>
 							<div>
 						    	<span><label>CreditBalance</label></span>
 						    	<span>
-									<input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true">
+									<input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="credit"/>>
 									<input type="button" value="Edit" onclick="document.getElementById('cr').readOnly=false;">
 								</span>
 						    </div>
 							<div>
 						    	<span><label>password</label></span>
 								<span>
-									<input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true">
+									<input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="password"/>>
 									<input type="button" value="Edit" onclick="document.getElementById('pa').readOnly=false;">
 								</span>
 						    </div>							

@@ -34,17 +34,14 @@ String subject;
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
+        PrintWriter out = response.getWriter();        
   /***************************************get parameters****************************************************************/      
             name = request.getParameter("userName");
             mail = request.getParameter("userEmail");
-             mobile = request.getParameter("userPhone");
-             title = request.getParameter("userEmail");
-             subject = request.getParameter("userMsg");
+            mobile = request.getParameter("userPhone");
+            title = request.getParameter("userEmail");
+            subject = request.getParameter("userMsg");
     /********************************************************************************************************************/      
 
         try {
@@ -55,15 +52,14 @@ String subject;
             out.println("<title>Servlet Contact</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Contact at " + request.getContextPath() + "</h1>");
-            
-            
-
-             
-            
-            
-            
-            
+            out.println("<h1>Servlet Contact at " + request.getContextPath() + "</h1>");        
+/***************************************view parameters****************************************************************/
+out.println("<h1> name : " + name + "</h1>");
+out.println("<h1> mail : " + mail + "</h1>");
+out.println("<h1> mobile : " + mobile + "</h1>");
+out.println("<h1> title : " + title + "</h1>");
+out.println("<h1> subject : " + subject + "</h1>");
+ /********************************************************************************************************************/
             out.println("</body>");
             out.println("</html>");
         } finally {            
