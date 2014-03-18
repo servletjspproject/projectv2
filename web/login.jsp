@@ -35,13 +35,13 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="index.jsp"><img src="images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Login</a> </li>
+					<li><a href="login.jsp">Login</a> </li>
 					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li								                       							   
+					<li><a href="user/register.html">Register</a> </li								                       							   
 					<div class="clear"></div>
 				</ul>
 		</div>	
@@ -60,12 +60,12 @@
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
+				<li class="active"><a href="index.jsp">Home</a></li>
 				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
+				<li><a href="user/about.html">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
 				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="user/contact.html">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -74,12 +74,12 @@
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
+				<li><a href="user/about.html">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
 				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="user/contact.html">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
@@ -108,7 +108,7 @@
 		<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping address, view and track your orders in your accoung and more.</p>
 		<div class="btn">
 			<form>
-				<input type="button"  onclick="location.href='register.html';" value="create an account" />
+				<input type="button"  onclick="location.href='user/register.html';" value="create an account" />
 			</form>
 		</div>
 	</div>

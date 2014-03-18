@@ -48,13 +48,13 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="index.jsp"><img src="images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Login</a> </li>
+					<li><a href="login.jsp">Login</a> </li>
 					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li>								                       
+					<li><a href="user/register.html">Register</a> </li>								                       
                     <li><a href="profile2.html">user name</a> </li>								   
 					<div class="clear"></div>
 				</ul>
@@ -74,13 +74,13 @@
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="profile2.html">profile</a></li>
+				<li class="active"><a href="index.jsp">Home</a></li>
+				<li><a href="user/products.jsp">products</a></li>
+				<li><a href="user/about.html">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
+				<li><a href="user/profile2.jsp">profile</a></li>
 				<!--<li><a href="blog.html">blog</a></li>-->
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="user/contact.html">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -89,19 +89,19 @@
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="profile2.html">profile</a></li>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="user/products.jsp">products</a></li>
+				<li><a href="user/about.html">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
+				<li><a href="user/profile2.jsp">profile</a></li>
 				<!--<li><a href="blog.html">blog</a></li>-->
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="user/contact.html">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
 	<div class="header_right">
 		<ul>
-			<li><a href="my_products.html"><i  class="cart"></i><span>0</span></a></li>
+			<li><a href="user/my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>

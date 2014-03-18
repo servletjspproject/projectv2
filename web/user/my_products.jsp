@@ -6,11 +6,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -18,8 +18,8 @@
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>
+<script type="text/javascript" src="../js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -35,14 +35,14 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="../index.jsp"><img src="../images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Login</a> </li>
+					<li><a href="../login.jsp">Login</a> </li>
 					<span class="log"> or </span>
 					<li><a href="register.html">Register</a> </li>								                       
-                    <li><a href="profile2.html">user name</a> </li>								   
+                    <li><a href="profile2.jsp">user name</a> </li>								   
 					<div class="clear"></div>
 				</ul>
 		</div>	
@@ -61,11 +61,11 @@
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
+				<li class="active"><a href="../index.jsp">Home</a></li>
+				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="profile2.html">profile</a></li>
+				<li><a href="../index.jsp">pages</a></li>
+				<li><a href="profile2.jsp">profile</a></li>
 				<!--<li><a href="blog.html">blog</a></li>-->
 				<li><a href="contact.html">Contact</a></li>
 				<div class="clear"></div>
@@ -76,11 +76,11 @@
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
+				<li><a href="../index.jsp">Home</a></li>
+				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="profile2.html">profile</a></li>
+				<li><a href="../index.jsp">pages</a></li>
+				<li><a href="profile2.jsp">profile</a></li>
 				<!--<li><a href="blog.html">blog</a></li>-->
 				<li><a href="contact.html">Contact</a></li>
 				<div class="clear"></div>
@@ -88,7 +88,7 @@
 		</nav>
 	<div class="header_right">
 		<ul>
-			<li><a href="my_products.html"><i  class="cart"></i><span>0</span></a></li>
+			<li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>
@@ -117,7 +117,7 @@
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
 			<a href="details.html">
-				<img src="images/pic1.jpg" alt="">
+				<img src="../images/pic1.jpg" alt="">
 				<h3>even &amp; odd</h3>
 				<span class="price">$145,99</span>
 			</a>
@@ -134,7 +134,7 @@
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
 			<a href="details.html">
-				<img src="images/pic1.jpg" alt="">
+				<img src="../images/pic1.jpg" alt="">
 				<h3>even &amp; odd</h3>
 				<span class="price">$145,99</span>
 			</a>
@@ -150,7 +150,7 @@
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
 			<a href="details.html">
-				<img src="images/pic4.jpg" alt="">
+				<img src="../images/pic4.jpg" alt="">
 				<h3>buffalo decollete</h3>
 				<span class="price">$145,99</span>
 			</a>
