@@ -1,5 +1,5 @@
 package tables;
-// Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA
+// Generated Mar 18, 2014 10:26:58 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -24,13 +24,14 @@ public class Users  implements java.io.Serializable {
      private String address;
      private String userscol;
      private int credit;
+     private String mobile;
      private Set userInterests = new HashSet(0);
 
     public Users() {
     }
 
 	
-    public Users(String fname, String lname, String password, String email, String userType, String isActive, String address, int credit) {
+    public Users(String fname, String lname, String password, String email, String userType, String isActive, String address, int credit, String mobile) {
         this.fname = fname;
         this.lname = lname;
         this.password = password;
@@ -39,8 +40,9 @@ public class Users  implements java.io.Serializable {
         this.isActive = isActive;
         this.address = address;
         this.credit = credit;
+        this.mobile = mobile;
     }
-    public Users(String fname, String lname, String password, String email, String gender, String userType, String isActive, String birthday, String job, String address, String userscol, int credit, Set userInterests) {
+    public Users(String fname, String lname, String password, String email, String gender, String userType, String isActive, String birthday, String job, String address, String userscol, int credit, String mobile, Set userInterests) {
        this.fname = fname;
        this.lname = lname;
        this.password = password;
@@ -53,6 +55,7 @@ public class Users  implements java.io.Serializable {
        this.address = address;
        this.userscol = userscol;
        this.credit = credit;
+       this.mobile = mobile;
        this.userInterests = userInterests;
     }
    
@@ -146,6 +149,13 @@ public class Users  implements java.io.Serializable {
     
     public void setCredit(int credit) {
         this.credit = credit;
+    }
+    public String getMobile() {
+        return this.mobile;
+    }
+    
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
     public Set getUserInterests() {
         return this.userInterests;

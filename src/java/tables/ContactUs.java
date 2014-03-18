@@ -1,5 +1,5 @@
 package tables;
-// Generated Mar 15, 2014 10:42:57 PM by Hibernate Tools 3.2.1.GA
+// Generated Mar 18, 2014 10:26:58 PM by Hibernate Tools 3.2.1.GA
 
 
 
@@ -13,21 +13,24 @@ public class ContactUs  implements java.io.Serializable {
      private String title;
      private String body;
      private String phone;
+     private int read;
 
     public ContactUs() {
     }
 
 	
-    public ContactUs(String email, String body, String phone) {
+    public ContactUs(String email, String body, String phone, int read) {
         this.email = email;
         this.body = body;
         this.phone = phone;
+        this.read = read;
     }
-    public ContactUs(String email, String title, String body, String phone) {
+    public ContactUs(String email, String title, String body, String phone, int read) {
        this.email = email;
        this.title = title;
        this.body = body;
        this.phone = phone;
+       this.read = read;
     }
    
     public String getEmail() {
@@ -57,6 +60,13 @@ public class ContactUs  implements java.io.Serializable {
     
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    public int getRead() {
+        return this.read;
+    }
+    
+    public void setRead(int read) {
+        this.read = read;
     }
 
 

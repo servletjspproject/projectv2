@@ -56,9 +56,9 @@ public class DataBaseOperations {
     
     public static void main(String[] args)
     {
-        Users users = new Users("sadds", "asd", "sd", "adsd", "adsdas", "1", "dsd", 1);
+        //
         DataBaseOperations baseOperations = new DataBaseOperations();
-        baseOperations.register(users);
+        //baseOperations.register(users);
     }
     
 }
