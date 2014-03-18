@@ -179,6 +179,19 @@
 				</div>						
 				<div>
 					<input type="submit" value="sign in" id="register-submit">
+                                        <span id="error" style="color: red" >
+                                            <%
+                                            
+                                            String error = request.getParameter("error");
+                                            if(error != null)
+                                            {
+                                                out.println("Date incorrect");
+                                            }
+                                            
+                                                    
+                                            %>
+                                            
+                                        </span>
 				</div>
 				<div class="forget">
 					<a href="#">forgot your password</a>

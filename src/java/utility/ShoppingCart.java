@@ -6,10 +6,25 @@
 
 package utility;
 
+import java.util.ArrayList;
+import tables.Products;
+
 /**
  *
  * @author Farida
  */
 public class ShoppingCart {
+    
+    ArrayList<Products> productses = new ArrayList<Products>();
+
+    public ArrayList<Products> getProductses() {
+        return productses;
+    }
+
+    public void setProductses(ArrayList<Products> productses) {
+        this.productses = productses;
+    }
+    
+    
     
 }
