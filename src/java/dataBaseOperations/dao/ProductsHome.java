@@ -26,7 +26,7 @@ public class ProductsHome {
     
     
     
-    public boolean addOrUpdateProduct(Products products )
+    public boolean addOrUpdateProduct(Products products)
     {
         session.getTransaction().begin();
         session.saveOrUpdate(products);
