@@ -155,7 +155,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						    	<span>
                                 <input id="fn" name="userNameProfile" type="text" class="textbox" value=<jsp:getProperty name="UsersBean" property="fname" /> readOnly="true">
 								
-								<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;">
+								<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;document.getElementById('fn').select()">
 								</span>
 						    </div>
 							<div>
