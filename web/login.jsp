@@ -1,4 +1,5 @@
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -188,9 +189,14 @@
                                                 out.println("Date incorrect");
                                             }
                                             
+                                            
                                                     
                                             %>
-                                            
+                                           <c:choose>
+                                <c:when test="${param.autho != null}">
+                                    <c:out value="you must login before go to this page"/>
+                                </c:when>
+                                           </c:choose>
                                         </span>
 				</div>
 				<div class="forget">

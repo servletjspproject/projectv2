@@ -83,7 +83,12 @@ License: Creative Commons Attribution 3.0 Unported
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
-				<li><a href="profile2.jsp">profile</a></li>
+				  <c:choose>
+                            <c:when test="${sessionScope.user != null}">
+                                
+                            <li><a href="user/profile2.jsp">profile</a></li>
+                            </c:when>
+                        </c:choose>
 				<!--<li><a href="blog.jsp">blog</a></li>-->
 				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
@@ -139,7 +144,7 @@ License: Creative Commons Attribution 3.0 Unported
 				<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit</p>
 				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 				<div class="read_more">
-					<a class="btn" href="details.jsp">read more</a>
+					<a class="btn" href="../details.jsp">read more</a>
 				</div>
 			</div>
 	</div>

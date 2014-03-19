@@ -78,7 +78,12 @@
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
-				<li><a href="profile2.jsp">profile</a></li>
+				  <c:choose>
+                            <c:when test="${sessionScope.user != null}">
+                                
+                            <li><a href="user/profile2.jsp">profile</a></li>
+                            </c:when>
+                        </c:choose>
 				<!--<li><a href="blog.jsp">blog</a></li>-->
 				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
@@ -129,7 +134,7 @@
 	<!-- start grids_of_3 -->
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<a href="details.jsp">
+			<a href="../details.jsp">
 				<img src="../images/pic1.jpg" alt="">
 				<h3>even &amp; odd</h3>
 				<span class="price">$145,99</span>
@@ -146,7 +151,7 @@
 	<!-- start grids_of_3 -->
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<a href="details.jsp">
+			<a href="../details.jsp">
 				<img src="../images/pic1.jpg" alt="">
 				<h3>even &amp; odd</h3>
 				<span class="price">$145,99</span>
@@ -162,7 +167,7 @@
 	<!-- start grids_of_3 -->
 	<div class="grids_of_3">
 		<div class="grid1_of_3">
-			<a href="details.jsp">
+			<a href="../details.jsp">
 				<img src="../images/pic4.jpg" alt="">
 				<h3>buffalo decollete</h3>
 				<span class="price">$145,99</span>

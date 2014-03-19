@@ -83,7 +83,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
-				<li><a href="profile2.jsp">profile</a></li>
+				  <c:choose>
+                            <c:when test="${sessionScope.user != null}">
+                                
+                            <li><a href="user/profile2.jsp">profile</a></li>
+                            </c:when>
+                        </c:choose>
 				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>

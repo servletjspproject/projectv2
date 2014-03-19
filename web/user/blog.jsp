@@ -12,11 +12,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -24,8 +24,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>
+<script type="text/javascript" src="../js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -41,23 +41,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.jsp"><img src="images/logo.png" alt=""/></a>
+			<a href="index.jsp"><img src="../images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
 					
                             <c:choose>
                                 <c:when test="${user == null}">
-                                    <li><a href="login.jsp">Login</a> </li>
+                                    <li><a href="../login.jsp">Login</a> </li>
                                     <span class="log"> or </span>
-                                    <li><a href="user/register.jsp">Register</a> </li>	
+                                    <li><a href="register.jsp">Register</a> </li>	
 
 
                                 </c:when>
                                 <c:when test="${user != null }">
 
-                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
-                                    <li><a href="user/register.jsp">log out</a> </li>	
+                                    <li><a href="profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="register.jsp">log out</a> </li>	
 
                                     <div class="clear"></div>
                                 </c:when>
@@ -79,10 +79,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li><a href="index.jsp">Home</a></li>
+				<li><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.jsp">about</a></li>
-				<li><a href="index.jsp">pages</a></li>
+				<li><a href="../index.jsp">pages</a></li>
 				<li  class="active"><a href="blog.jsp">blog</a></li>
 				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
@@ -93,10 +93,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.jsp">Home</a></li>
+				<li><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="about.jsp">about</a></li>
-				<li><a href="index.jsp">pages</a></li>
+				<li><a href="../index.jsp">pages</a></li>
 				<li><a href="blog.jsp">blog</a></li>
 				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
@@ -128,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="about-left">
 				<h3><a href="#">Lorem Ipsum is simply dummy text</a></h3>
 			</div>	
-				<div class="blog-img"><a href="project.jsp"><img src="images/blog-img2.jpg" alt=""></a></div>
+				<div class="blog-img"><a href="project.jsp"><img src="../images/blog-img2.jpg" alt=""></a></div>
 			     <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">
@@ -146,7 +146,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		         <div class="about-left">
 					<h3><a href="#">It is a long established fact that a reader will be distracted</a></h3>
 				 </div>	
-		         <div class="blog-img1"><a href="project.jsp"><img src="images/blog-img1.jpg" alt=""></a></div>
+		         <div class="blog-img1"><a href="project.jsp"><img src="../images/blog-img1.jpg" alt=""></a></div>
 		         <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">
@@ -164,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		          <div class="about-left">
 					<h3><a href="#">There are many variations of passages of Lorem Ipsum available</a></h3>
 				 </div>	
-		         <div class="blog-img1"><a href="project.jsp"><img src="images/blog-img.jpg" alt=""></a></div>
+		         <div class="blog-img1"><a href="project.jsp"><img src="../images/blog-img.jpg" alt=""></a></div>
 		         <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">
@@ -281,12 +281,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="span1_of_3">
 			<h3>flickr widget</h3>
 			<ul class="f_nav">
-				<li><a href="#"><img src="images/f_pic1.jpg" alt="" /> </a></li>
-				<li><a href="#"><img src="images/f_pic2.jpg" alt="" /> </a></li>
-				<li><a href="#"><img src="images/f_pic3.jpg" alt="" /> </a></li>
-				<li><a href="#"><img src="images/f_pic4.jpg" alt="" /> </a></li>
-				<li><a href="#"><img src="images/f_pic5.jpg" alt="" /> </a></li>
-				<li><a href="#"><img src="images/f_pic6.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic1.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic2.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic3.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic4.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic5.jpg" alt="" /> </a></li>
+				<li><a href="#"><img src="../images/f_pic6.jpg" alt="" /> </a></li>
 			</ul>
 		</div>
 		<div class="clear"></div>

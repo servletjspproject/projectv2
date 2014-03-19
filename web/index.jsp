@@ -103,7 +103,14 @@
                         <li><a href="user/products.jsp">products</a></li>
                         <li><a href="user/about.jsp">about</a></li>
                         <li><a href="index.jsp">pages</a></li>
-                        <li><a href="user/profile2.jsp">profile</a></li>
+                        <c:choose>
+                            <c:when test="${sessionScope.user != null}">
+                                
+                            <li><a href="user/profile2.jsp">profile</a></li>
+                            </c:when>
+                        </c:choose>
+                        
+                        
                         <!--<li><a href="blog.jsp">blog</a></li>-->
                         <li><a href="user/contact.jsp">Contact</a></li>
                         <div class="clear"></div>

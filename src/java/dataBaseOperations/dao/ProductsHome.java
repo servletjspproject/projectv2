@@ -47,8 +47,7 @@ public class ProductsHome {
     }
     
 
-    public static void main(String[] args) {
-        ProductsHome productsHome = new ProductsHome();
+    public static void main(String[] args) {         ProductsHome productsHome = new ProductsHome();
 
         System.out.println(productsHome.getLatestProducts(7).size());
     }
