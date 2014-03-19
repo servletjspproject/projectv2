@@ -4,11 +4,12 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 
 -->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <title>The Fooseshoes Website Template | About :: w3layouts</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,7 +30,7 @@ License: Creative Commons Attribution 3.0 Unported
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				$('jsp,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
 	</script>
@@ -44,11 +45,23 @@ License: Creative Commons Attribution 3.0 Unported
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="../login.jsp">Login</a> </li>
-					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li>								                       
-                    <li><a href="profile2.jsp">user name</a> </li>								   
-					<div class="clear"></div>
+					
+                            <c:choose>
+                                <c:when test="${user == null}">
+                                    <li><a href="login.jsp">Login</a> </li>
+                                    <span class="log"> or </span>
+                                    <li><a href="user/register.jsp">Register</a> </li>	
+
+
+                                </c:when>
+                                <c:when test="${user != null }">
+
+                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="user/register.jsp">log out</a> </li>	
+
+                                    <div class="clear"></div>
+                                </c:when>
+                            </c:choose>
 				</ul>
 		</div>	
 		<div class="web_search">
@@ -68,11 +81,11 @@ License: Creative Commons Attribution 3.0 Unported
 			<ul>
 				<li class="active"><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
 				<li><a href="profile2.jsp">profile</a></li>
-				<!--<li><a href="blog.html">blog</a></li>-->
-				<li><a href="contact.html">Contact</a></li>
+				<!--<li><a href="blog.jsp">blog</a></li>-->
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -83,11 +96,11 @@ License: Creative Commons Attribution 3.0 Unported
 			<ul>
 				<li><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
 				<li><a href="profile2.jsp">profile</a></li>
-				<!--<li><a href="blog.html">blog</a></li>-->
-				<li><a href="contact.html">Contact</a></li>
+				<!--<li><a href="blog.jsp">blog</a></li>-->
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
@@ -126,7 +139,7 @@ License: Creative Commons Attribution 3.0 Unported
 				<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit</p>
 				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 				<div class="read_more">
-					<a class="btn" href="details.html">read more</a>
+					<a class="btn" href="details.jsp">read more</a>
 				</div>
 			</div>
 	</div>

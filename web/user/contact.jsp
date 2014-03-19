@@ -1,14 +1,15 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!--A Design by W3layouts
 Author: W3layout
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <title>The Fooseshoes Website Template | Contact :: w3layouts</title>
-<meta  http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta  http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				$('jsp,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
 	</script>
@@ -44,11 +45,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="../login.jsp">Login</a> </li>
-					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li>								                       
-                    <li><a href="profile2.html">user name</a> </li>								   
-					<div class="clear"></div>
+                                    		
+                            <c:choose>
+                                <c:when test="${user == null}">
+                                    <li><a href="login.jsp">Login</a> </li>
+                                    <span class="log"> or </span>
+                                    <li><a href="user/register.jsp">Register</a> </li>	
+
+
+                                </c:when>
+                                <c:when test="${user != null }">
+
+                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="user/register.jsp">log out</a> </li>	
+
+                                    <div class="clear"></div>
+                                </c:when>
+                            </c:choose>
 				</ul>
 		</div>	
 		<div class="web_search">
@@ -68,10 +81,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<ul>
 				<li class="active"><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
 				<li><a href="profile2.jsp">profile</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -82,11 +95,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<ul>
 				<li><a href="../index.jsp">Home</a></li>
 				<li><a href="products.jsp">products</a></li>
-				<li><a href="about.html">about</a></li>
+				<li><a href="about.jsp">about</a></li>
 				<li><a href="../index.jsp">pages</a></li>
 				
 				<li><a href="profile2.jsp">profile</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>

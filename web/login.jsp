@@ -1,9 +1,9 @@
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
 <title>The Fooseshoes Website Template | Loign :: w3layouts</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -24,7 +24,7 @@
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				$('jsp,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
 	</script>
@@ -41,7 +41,7 @@
 				<ul>
 					<li><a href="login.jsp">Login</a> </li>
 					<span class="log"> or </span>
-					<li><a href="user/register.html">Register</a> </li								                       							   
+					<li><a href="user/register.jsp">Register</a> </li								                       							   
 					<div class="clear"></div>
 				</ul>
 		</div>	
@@ -61,11 +61,11 @@
 		<div class="menu">
 			<ul>
 				<li class="active"><a href="index.jsp">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="user/about.html">about</a></li>
+				<li><a href="products.jsp">products</a></li>
+				<li><a href="user/about.jsp">about</a></li>
 				<li><a href="index.jsp">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="user/contact.html">Contact</a></li>
+				<li><a href="blog.jsp">blog</a></li>
+				<li><a href="user/contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -75,11 +75,11 @@
 		<nav id="menu-left">
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="user/about.html">about</a></li>
+				<li><a href="products.jsp">products</a></li>
+				<li><a href="user/about.jsp">about</a></li>
 				<li><a href="index.jsp">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="user/contact.html">Contact</a></li>
+				<li><a href="blog.jsp">blog</a></li>
+				<li><a href="user/contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
@@ -108,7 +108,7 @@
 		<p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping address, view and track your orders in your accoung and more.</p>
 		<div class="btn">
 			<form>
-				<input type="button"  onclick="location.href='user/register.html';" value="create an account" />
+				<input type="button"  onclick="location.href='user/register.jsp';" value="create an account" />
 			</form>
 		</div>
 	</div>
@@ -156,7 +156,7 @@
 			var send = document.getElementById('register-submit');
 			if(send) {
 				send.onclick = function () {
-					this.innerHTML = '...Sending';
+					this.innerjsp = '...Sending';
 				}
 			}
 		

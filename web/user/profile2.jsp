@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="tables.Users"%>
 <!--A Design by W3layouts
 Author: W3layout
@@ -5,11 +6,11 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
         <title>The Fooseshoes Website Template | Contact :: w3layouts</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
         <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -30,12 +31,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             jQuery(document).ready(function($) {
                 $(".scroll").click(function(event) {
                     event.preventDefault();
-                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1200);
+                    $('jsp,body').animate({scrollTop: $(this.hash).offset().top}, 1200);
                 });
             });
         </script>
     </head>
     <body>
+       
         <!-- start header -->
         <div class="top_bg">
             <div class="wrap">
@@ -45,11 +47,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="log_reg">
                         <ul>
-                            <li><a href="../login.jsp">Login</a> </li>
-                            <span class="log"> or </span>
-                            <li><a href="register.html">Register</a> </li>								                       
-                            <li><a href="profile2.html">user name</a> </li>								   
-                            <div class="clear"></div>
+                            
+                            <c:choose>
+                                <c:when test="${user == null}">
+                                    <li><a href="login.jsp">Login</a> </li>
+                                    <span class="log"> or </span>
+                                    <li><a href="user/register.jsp">Register</a> </li>	
+
+
+                                </c:when>
+                                <c:when test="${user != null }">
+
+                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="user/register.jsp">log out</a> </li>	
+
+                                    <div class="clear"></div>
+                                </c:when>
+                            </c:choose>
                         </ul>
                     </div>	
                     <div class="web_search">
@@ -70,12 +84,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="menu">
                     <ul>
                         <li class="active"><a href="../index.jsp">Home</a></li>
-                        <li><a href="products.html">products</a></li>
-                        <li><a href="about.html">about</a></li>
+                        <li><a href="products.jsp">products</a></li>
+                        <li><a href="about.jsp">about</a></li>
                         <li><a href="../index.jsp">pages</a></li>
-                        <li><a href="profile2.html">profile</a></li>
-                        <!--<li><a href="blog.html">blog</a></li>-->
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="profile2.jsp">profile</a></li>
+                        <!--<li><a href="blog.jsp">blog</a></li>-->
+                        <li><a href="contact.jsp">Contact</a></li>
                         <div class="clear"></div>
                     </ul>
                 </div>
@@ -85,12 +99,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <nav id="menu-left">
                     <ul>
                         <li><a href="../index.jsp">Home</a></li>
-                        <li><a href="products.html">products</a></li>
-                        <li><a href="about.html">about</a></li>
+                        <li><a href="products.jsp">products</a></li>
+                        <li><a href="about.jsp">about</a></li>
                         <li><a href="../index.jsp">pages</a></li>
-                        <li><a href="profile2.html">profile</a></li>
-                        <!--<li><a href="blog.html">blog</a></li>-->
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="profile2.jsp">profile</a></li>
+                        <!--<li><a href="blog.jsp">blog</a></li>-->
+                        <li><a href="contact.jsp">Contact</a></li>
                         <div class="clear"></div>
                     </ul>
                 </nav>
@@ -119,7 +133,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="contact_info">
                                 <h3></h3>
                                 <div class="map">
-                                    <img src="../images/profile.png" alt=""></br>
+                                    <%
+                                        if(session.getAttribute("user") != null)
+                                    out.println("<img src=\"images/"+((Users)(session.getAttribute("user"))).getImage()+"\" alt=\"\"></br>");
+                                    %>
+                                    
                                 </div>
                             </div>
                             <div class="company_address">
@@ -134,28 +152,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
                                     <!--**********************************************Bean Code*********************************************************-->	
-                                    <jsp:useBean id="UsersBean" scope="session" class="tables.Users"/>
+                                    
 
                                     <!--value=${session.UsersBean.lname}-->
                                     <!--value=${sessionScope.UsersBean.lname}-->
 
                                     <!--             el code da haytshal lma farida t7ot codha this is just example                                 -->
-                                    <%
-                                        UsersBean.setAddress("my add");
-                                        UsersBean.setEmail("my mail");
-                                        UsersBean.setFname("tasneem");
-                                        UsersBean.setLname("ibraheem");
-
-                                        //HttpSession session = request.getSession(true); 
-                                        //session.setAttribute("sessionBean", UsersBean); 
-
-                                    %>
-
+                                  
                                     <!--***************************************************************************************************************-->						
                                     <div>
                                         <span><label>FNAME</label></span>
                                         <span>
-                                            <input id="fn" name="userNameProfile" type="text" class="textbox" value=<jsp:getProperty name="UsersBean" property="fname" /> readOnly="true">
+                                            <input id="fn" name="userNameProfile" type="text" class="textbox" value="${user.fname}" readOnly="true">
 
                                             <input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly = false;
                 document.getElementById('fn').select()">
@@ -164,49 +172,49 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div>
                                         <span><label>LNAME</label></span>
                                         <span>
-                                            <input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="lname" />>
+                                            <input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true" value=${user.lname}>
                                             <input type="button" value="Edit" onclick="document.getElementById('ln').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>E-MAIL</label></span>
                                         <span>
-                                            <input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="email" />>
+                                            <input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true" value=${user.email}>
                                             <input type="button" value="Edit" onclick="document.getElementById('em').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>MOBILE</label></span>
                                         <span>
-                                            <input id="mo" name="userPhoneProfile" type="text" class="textbox" readOnly="true">
+                                            <input id="mo" name="userPhoneProfile" type="text" class="textbox" readOnly="true" value=${user.mobile}>
                                             <input type="button" value="Edit" onclick="document.getElementById('mo').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>Address</label></span>
                                         <span>
-                                            <input id="add" name="addressProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="address"/>>
+                                            <input id="add" name="addressProfile" type="text" class="textbox" readOnly="true" value=${user.address}>
                                             <input type="button" value="Edit" onclick="document.getElementById('add').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>JOB</label></span>
                                         <span>
-                                            <input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="job"/>>
+                                            <input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true" value=${user.job}>
                                             <input type="button" value="Edit" onclick="document.getElementById('jo').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>CreditBalance</label></span>
                                         <span>
-                                            <input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="credit"/>>
+                                            <input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true" value=${user.credit}>
                                             <input type="button" value="Edit" onclick="document.getElementById('cr').readOnly = false;">
                                         </span>
                                     </div>
                                     <div>
                                         <span><label>password</label></span>
                                         <span>
-                                            <input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true" value=<jsp:getProperty name="UsersBean" property="password"/>>
+                                            <input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true" value=${user.password}>
                                             <input type="button" value="Edit" onclick="document.getElementById('pa').readOnly = false;">
                                         </span>
                                     </div>							

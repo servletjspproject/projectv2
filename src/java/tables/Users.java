@@ -1,5 +1,5 @@
 package tables;
-// Generated Mar 18, 2014 10:26:58 PM by Hibernate Tools 3.2.1.GA
+// Generated Mar 19, 2014 1:33:30 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -25,6 +25,7 @@ public class Users  implements java.io.Serializable {
      private String userscol;
      private int credit;
      private String mobile;
+     private String image;
      private Set userInterests = new HashSet(0);
 
     public Users() {
@@ -42,7 +43,7 @@ public class Users  implements java.io.Serializable {
         this.credit = credit;
         this.mobile = mobile;
     }
-    public Users(String fname, String lname, String password, String email, String gender, String userType, String isActive, String birthday, String job, String address, String userscol, int credit, String mobile, Set userInterests) {
+    public Users(String fname, String lname, String password, String email, String gender, String userType, String isActive, String birthday, String job, String address, String userscol, int credit, String mobile, String image, Set userInterests) {
        this.fname = fname;
        this.lname = lname;
        this.password = password;
@@ -56,6 +57,7 @@ public class Users  implements java.io.Serializable {
        this.userscol = userscol;
        this.credit = credit;
        this.mobile = mobile;
+       this.image = image;
        this.userInterests = userInterests;
     }
    
@@ -156,6 +158,13 @@ public class Users  implements java.io.Serializable {
     
     public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+    public String getImage() {
+        return this.image;
+    }
+    
+    public void setImage(String image) {
+        this.image = image;
     }
     public Set getUserInterests() {
         return this.userInterests;

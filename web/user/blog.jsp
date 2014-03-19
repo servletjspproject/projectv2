@@ -4,11 +4,12 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-<!DOCTYPE HTML>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <title>The Fooseshoes Website Template | Blog :: w3layouts</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/jsp; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -29,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
 				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				$('jsp,body').animate({scrollTop:$(this.hash).offset().top},1200);
 			});
 		});
 	</script>
@@ -40,14 +41,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="index.jsp"><img src="images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Login</a> </li>
-					<span class="log"> or </span>
-					<li><a href="register.html">Register</a> </li>								   
-					<div class="clear"></div>
+					
+                            <c:choose>
+                                <c:when test="${user == null}">
+                                    <li><a href="login.jsp">Login</a> </li>
+                                    <span class="log"> or </span>
+                                    <li><a href="user/register.jsp">Register</a> </li>	
+
+
+                                </c:when>
+                                <c:when test="${user != null }">
+
+                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="user/register.jsp">log out</a> </li>	
+
+                                    <div class="clear"></div>
+                                </c:when>
+                            </c:choose>
 				</ul>
 		</div>	
 		<div class="web_search">
@@ -65,12 +79,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="header_btm">
 		<div class="menu">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li  class="active"><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="products.jsp">products</a></li>
+				<li><a href="about.jsp">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
+				<li  class="active"><a href="blog.jsp">blog</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</div>
@@ -79,12 +93,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="products.html">products</a></li>
-				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="index.jsp">Home</a></li>
+				<li><a href="products.jsp">products</a></li>
+				<li><a href="about.jsp">about</a></li>
+				<li><a href="index.jsp">pages</a></li>
+				<li><a href="blog.jsp">blog</a></li>
+				<li><a href="contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
@@ -114,7 +128,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="about-left">
 				<h3><a href="#">Lorem Ipsum is simply dummy text</a></h3>
 			</div>	
-				<div class="blog-img"><a href="project.html"><img src="images/blog-img2.jpg" alt=""></a></div>
+				<div class="blog-img"><a href="project.jsp"><img src="images/blog-img2.jpg" alt=""></a></div>
 			     <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">
@@ -132,7 +146,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		         <div class="about-left">
 					<h3><a href="#">It is a long established fact that a reader will be distracted</a></h3>
 				 </div>	
-		         <div class="blog-img1"><a href="project.html"><img src="images/blog-img1.jpg" alt=""></a></div>
+		         <div class="blog-img1"><a href="project.jsp"><img src="images/blog-img1.jpg" alt=""></a></div>
 		         <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">
@@ -150,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		          <div class="about-left">
 					<h3><a href="#">There are many variations of passages of Lorem Ipsum available</a></h3>
 				 </div>	
-		         <div class="blog-img1"><a href="project.html"><img src="images/blog-img.jpg" alt=""></a></div>
+		         <div class="blog-img1"><a href="project.jsp"><img src="images/blog-img.jpg" alt=""></a></div>
 		         <div class="blog">
 					<div class="blogsidebar span_1_of_blog">
 					   <ul class="blog-list">

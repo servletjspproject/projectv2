@@ -1,5 +1,5 @@
 package tables;
-// Generated Mar 18, 2014 10:26:58 PM by Hibernate Tools 3.2.1.GA
+// Generated Mar 19, 2014 1:33:30 AM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
