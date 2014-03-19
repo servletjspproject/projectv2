@@ -48,16 +48,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					
                             <c:choose>
                                 <c:when test="${user == null}">
-                                    <li><a href="login.jsp">Login</a> </li>
+                                    <li><a href="../login.jsp">Login</a> </li>
                                     <span class="log"> or </span>
-                                    <li><a href="user/register.jsp">Register</a> </li>	
+                                    <li><a href="register.jsp">Register</a> </li>	
 
 
                                 </c:when>
                                 <c:when test="${user != null }">
 
-                                    <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
-                                    <li><a href="user/register.jsp">log out</a> </li>	
+                                    <li><a href="profile2.jsp">${user.fname}</a> </li>								   
+                                    <li><a href="register.jsp">log out</a> </li>	
 
                                     <div class="clear"></div>
                                 </c:when>
@@ -100,11 +100,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="clear"></div>
 			</ul>
 		</nav>
-	<div class="header_right">
-		<ul>
-			<li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
-		</ul>
-	</div>
+	
 	<div class="clear"></div>
 </div>
 </div>

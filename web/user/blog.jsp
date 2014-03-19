@@ -41,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.jsp"><img src="../images/logo.png" alt=""/></a>
+			<a href="../index.jsp"><img src="../images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -102,12 +102,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="clear"></div>
 			</ul>
 		</nav>
-	<div class="header_right">
-		<ul>
-			<li><a href="#"><i  class="art"></i><span class="color1">30</span></a></li>
-			<li><a href="#"><i  class="cart"></i><span>0</span></a></li>
-		</ul>
-	</div>
+	<c:choose>
+                    <c:when test="${user != null}">
+
+                        <div class="header_right">
+                            <ul>
+                                <li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
+                            </ul>
+                        </div>
+
+                    </c:when>
+
+                </c:choose>
 	<div class="clear"></div>
 </div>
 </div>

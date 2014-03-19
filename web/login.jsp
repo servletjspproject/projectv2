@@ -65,7 +65,7 @@
 				<li><a href="products.jsp">products</a></li>
 				<li><a href="user/about.jsp">about</a></li>
 				<li><a href="index.jsp">pages</a></li>
-				<li><a href="blog.jsp">blog</a></li>
+				
 				<li><a href="user/contact.jsp">Contact</a></li>
 				<div class="clear"></div>
 			</ul>
@@ -84,11 +84,7 @@
 				<div class="clear"></div>
 			</ul>
 		</nav>
-	<div class="header_right">
-		<ul>
-			<li><a href="#"><i  class="cart"></i><span>0</span></a></li>
-		</ul>
-	</div>
+	
 	<div class="clear"></div>
 </div>
 </div>

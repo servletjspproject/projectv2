@@ -53,7 +53,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     		
                             <c:choose>
                                 <c:when test="${user == null}">
-                                    <li><a href="login.jsp">Login</a> </li>
+                                    <li><a href="../login.jsp">Login</a> </li>
                                     <span class="log"> or </span>
                                     <li><a href="user/register.jsp">Register</a> </li>	
 
@@ -103,11 +103,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<a class="navicon" href="#menu-left"> </a>
 		</div>
 		
-	<div class="header_right">
-		<ul>
-			<li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
-		</ul>
-	</div>
+	<c:choose>
+                    <c:when test="${user != null}">
+
+                        <div class="header_right">
+                            <ul>
+                                <li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
+                            </ul>
+                        </div>
+
+                    </c:when>
+
+                </c:choose>
 	<div class="clear"></div>
 </div>
 </div>
