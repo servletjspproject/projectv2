@@ -11,11 +11,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
 <script src="../js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -23,8 +23,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>
+<script type="text/javascript" src="../js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -40,11 +40,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="index.html"><img src="../images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Log Out</a> </li>
+					<li><a href="../login.html">Log Out</a> </li>
 				
 					<div class="clear"></div>
 				</ul>
@@ -85,10 +85,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<nav id="menu-left">
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="../index.html">Home</a></li>
 				<li><a href="products.html">products</a></li>
 				<li><a href="about.html">about</a></li>
-				<li><a href="index.html">pages</a></li>
+				<li><a href="../index.html">pages</a></li>
 				<li><a href="blog.html">blog</a></li>
 				<li><a href="contact.html">Contact</a></li>
 				<li><a href="profile.html">profile</a></li>
@@ -116,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="contact_info">
 			    	 	<h3></h3>
 			    	 		<div class="map">
-								<img src="images/newproduct.png" alt=""></br>
+								<img src="../images/newproduct.png" alt=""></br>
 					   		</div>
       				</div>
       			<div class="company_address">

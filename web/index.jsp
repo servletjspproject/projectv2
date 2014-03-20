@@ -1,5 +1,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib  prefix="cat" uri="/WEB-INF/tlds/category" %>
 
 <!DOCTYPE html>
 <html>
@@ -158,12 +159,8 @@
 
                     <div style="width:20%;height:100%;float:left">
                         <ul class="det_nav">
-                            <li><a href="products.jsp">Heals</a></li>
-                            <li><a href="products.jsp">Sandels</a></li>
-                            <li><a href="products.jsp">Boots</a></li>
-                            <li><a href="products.jsp">Slippers</a></li>
-                            <li><a href="products.jsp">Flat</a></li>
-                            <li><a href="products.jsp">New Comers</a></li>
+                            
+                                                        <cat:getCategory></cat:getCategory>
                         </ul>
 
 

@@ -11,18 +11,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 
  <link rel="shortcut icon" href="../favicon.ico"> 
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
-		<script type="text/javascript" src="js/modernizr.custom.79639.js"></script> 
-		<noscript><link rel="stylesheet" type="text/css" href="css/noJS.css" /></noscript>
+		<script type="text/javascript" src="../js/modernizr.custom.79639.js"></script> 
+		<noscript><link rel="stylesheet" type="text/css" href="../css/noJS.css" /></noscript>
 		
 <!--- start-mmmenu-script---->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script src="../js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -30,8 +30,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="../js/easing.js"></script>
+<script type="text/javascript" src="../js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -47,11 +47,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="images/logo.png" alt=""/></a>
+			<a href="../index.html"><img src="../images/logo.png" alt=""/></a>
 		</div>
 	 <div class="log_reg">
 				<ul>
-					<li><a href="login.html">Log Out</a> </li>
+					<li><a href="../login.html">Log Out</a> </li>
 				
 					<div class="clear"></div>
 				</ul>
@@ -116,7 +116,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<h3>register new admin</h3>
 		<p>By creating an account for admin with our store, he will be able to move through the customers and products data, store new products and categories, view and track customers' orders in their accounts and more.</p>
 		<div class="registration_left">
-		<a href="#"><div class="reg_fb"><img src="images/facebook.png" alt=""><i>register using Facebook</i><div class="clear"></div></div></a>
+		<a href="#"><div class="reg_fb"><img src="../images/facebook.png" alt=""><i>register using Facebook</i><div class="clear"></div></div></a>
 		 <div class="registration_form">
 		 <!-- Form 
 		 Sign up for the first time and enter his profile data (name, birthday, password, job, e-mail, credit balance, address, interests, …  )
