@@ -62,7 +62,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <c:when test="${user != null }">
 
                                     <li><a href="user/profile2.jsp">${user.fname}</a> </li>								   
-                                    <li><a href="user/register.jsp">log out</a> </li>	
+                                    <li><a href="../LogOut">log out</a> </li>	
 
                                     <div class="clear"></div>
                                 </c:when>
