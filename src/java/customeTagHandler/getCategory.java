@@ -43,7 +43,7 @@ public class getCategory extends SimpleTagSupport {
             List<Categories>  categorieses = categoryHome.getCategories();
             
              for (Categories categories : categorieses) {
-               out.println("<li><a href=\"products.jsp\">"+categories.getName()+"</a></li>"); 
+               out.println("<li><a href=\"user/products.jsp?id="+categories.getIdCategories()+"\">"+categories.getName()+"</a></li>"); 
             }
             
             

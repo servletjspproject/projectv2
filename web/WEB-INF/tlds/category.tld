@@ -25,4 +25,15 @@
     <tag-class>customeTagHandler.getCategory</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>GetProductOfCat</name>
+    <tag-class>customeTagHandler.GetProductOfCat</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>catID</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
 </taglib>

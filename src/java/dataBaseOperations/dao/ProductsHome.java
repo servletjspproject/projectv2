@@ -47,6 +47,20 @@ public class ProductsHome {
         // session.getTransaction().commit();
         return productses;
     }
+    
+    public List<Products> getProductsOFGategory(int categoryID) {
+        ArrayList<Products> productses;
+        String hqlQuery = "from Products p where p.categories.idCategories = "+categoryID+" ";
+        session.getTransaction().begin();
+        Query query = session.createQuery(hqlQuery);
+        productses = (ArrayList<Products>) query.list();
+        // session.getTransaction().commit();
+        return productses;
+    }
+    
+   
+    
+    
 
     public static void main(String[] args) {
         ProductsHome productsHome = new ProductsHome();
@@ -59,8 +73,11 @@ public class ProductsHome {
         products.setPrice(121212);
         products.setQuantity(13);
         products.setPlatform("sad");
-        productsHome.addOrUpdateProduct(products, 5);
+       // productsHome.addOrUpdateProduct(products, 5);
         //products.getDescription()
+        
+        System.out.println(productsHome.getProductsOFGategory(1).size());
+        
         
         
     }
