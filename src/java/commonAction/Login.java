@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import tables.Users;
-import utility.ShoppingCart;
+import utility.ShoppingCartSession;
 
 /**
  *
@@ -25,7 +25,7 @@ public class Login extends HttpServlet {
     String mail;
     String pass;
     HttpSession session;
-    ShoppingCart cart = new ShoppingCart();
+    ShoppingCartSession cart = new ShoppingCartSession();
 
     /**
      * Processes requests for both HTTP

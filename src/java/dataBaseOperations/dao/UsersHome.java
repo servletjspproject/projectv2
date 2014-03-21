@@ -55,7 +55,7 @@ public class UsersHome {
         users.setIsActive("1");
         users.setAddress("assaasas");
 
-       // usersHome.addOrUpdateProduct(users);
+        usersHome.addOrUpdateProduct(users);
         Users  users1 = usersHome.getUser("sds@sdkjs.com", "123");
         System.out.println(users1.getEmail());
 

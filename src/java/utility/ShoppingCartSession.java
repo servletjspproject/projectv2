@@ -13,7 +13,7 @@ import tables.Products;
  *
  * @author Farida
  */
-public class ShoppingCart {
+public class ShoppingCartSession {
     
     ArrayList<Products> productses = new ArrayList<Products>();
 
