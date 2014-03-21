@@ -4,22 +4,24 @@
  */
 package userAction;
 
+import dataBaseOperations.dao.ContactUsHome;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import tables.ContactUs;
 
 /**
  *
  * @author abdotalaat
  */
 public class Contact extends HttpServlet {
-String name;
+
 String mail;
 String mobile;
-String title;
+
 String subject;
 
     /**
@@ -37,31 +39,24 @@ String subject;
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();        
   /***************************************get parameters****************************************************************/      
-            name = request.getParameter("userName");
+            
             mail = request.getParameter("userEmail");
             mobile = request.getParameter("userPhone");
-            title = request.getParameter("userEmail");
+            
             subject = request.getParameter("userMsg");
     /********************************************************************************************************************/      
 
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Contact</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Contact at " + request.getContextPath() + "</h1>");        
-/***************************************view parameters****************************************************************/
-out.println("<h1> name : " + name + "</h1>");
-out.println("<h1> mail : " + mail + "</h1>");
-out.println("<h1> mobile : " + mobile + "</h1>");
-out.println("<h1> title : " + title + "</h1>");
-out.println("<h1> subject : " + subject + "</h1>");
- /********************************************************************************************************************/
-            out.println("</body>");
-            out.println("</html>");
+           
+            ContactUs contactUs = new ContactUs();
+            contactUs.setEmail(mail);
+            contactUs.setBody(subject);
+            contactUs.setPhone(mobile);
+            contactUs.setReadornot(0);
+            ContactUsHome contactUsHome = new ContactUsHome();
+            contactUsHome.sendMessageTOAdmin(contactUs);
+            response.sendRedirect("user/contact.jsp");
+            
         } finally {            
             out.close();
         }

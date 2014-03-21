@@ -59,7 +59,7 @@ public class CategoryHome {
         CategoryHome categoryHome = new  CategoryHome();
         //System.out.println(categoryHome.getCategories().size());
         
-        Categories categories = new Categories("New Comers", "\\");
+        Categories categories = new Categories("New Comerms", "\\");
         categoryHome.addOrUpdateCategory(categories);
         
     }

@@ -158,10 +158,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				  <div class="contact-form">
 				  	<h3>Contact Us</h3>
 					    <form method="post" action="../Contact"><!--Contact-->
-					    	<div>
-						    	<span><label>NAME</label></span>
-						    	<span><input name="userName" type="text" class="textbox"></span>
-						    </div>
+					    	
 						    <div>
 						    	<span><label>E-MAIL</label></span>
 						    	<span><input name="userEmail" type="text" class="textbox"></span>

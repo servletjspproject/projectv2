@@ -1,5 +1,5 @@
 package tables;
-// Generated Mar 19, 2014 1:33:30 AM by Hibernate Tools 3.2.1.GA
+// Generated Mar 21, 2014 8:43:22 AM by Hibernate Tools 3.2.1.GA
 
 
 
@@ -9,43 +9,35 @@ package tables;
 public class ContactUs  implements java.io.Serializable {
 
 
+     private Integer id;
      private String email;
-     private String title;
      private String body;
      private String phone;
-     private int read;
+     private int readornot;
 
     public ContactUs() {
     }
 
-	
-    public ContactUs(String email, String body, String phone, int read) {
-        this.email = email;
-        this.body = body;
-        this.phone = phone;
-        this.read = read;
-    }
-    public ContactUs(String email, String title, String body, String phone, int read) {
+    public ContactUs(String email, String body, String phone, int readornot) {
        this.email = email;
-       this.title = title;
        this.body = body;
        this.phone = phone;
-       this.read = read;
+       this.readornot = readornot;
     }
    
+    public Integer getId() {
+        return this.id;
+    }
+    
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public String getEmail() {
         return this.email;
     }
     
     public void setEmail(String email) {
         this.email = email;
-    }
-    public String getTitle() {
-        return this.title;
-    }
-    
-    public void setTitle(String title) {
-        this.title = title;
     }
     public String getBody() {
         return this.body;
@@ -61,12 +53,12 @@ public class ContactUs  implements java.io.Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-    public int getRead() {
-        return this.read;
+    public int getReadornot() {
+        return this.readornot;
     }
     
-    public void setRead(int read) {
-        this.read = read;
+    public void setReadornot(int readornot) {
+        this.readornot = readornot;
     }
 
 

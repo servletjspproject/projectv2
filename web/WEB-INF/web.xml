@@ -7,7 +7,7 @@
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
         <url-pattern>/user/profile2.jsp</url-pattern>
-         <url-pattern>/profile2.jsp</url-pattern>
+        <url-pattern>/profile2.jsp</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>RegisterationServlet</servlet-name>
@@ -56,10 +56,6 @@
     <servlet>
         <servlet-name>AddAdmin</servlet-name>
         <servlet-class>adminActions.AddAdmin</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>AddCategory</servlet-name>
-        <servlet-class>categoryOperations.AddCategory</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DeleteCategory</servlet-name>
@@ -156,10 +152,6 @@
     <servlet-mapping>
         <servlet-name>AddAdmin</servlet-name>
         <url-pattern>/AddAdmin</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AddCategory</servlet-name>
-        <url-pattern>/AddCategory</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteCategory</servlet-name>
