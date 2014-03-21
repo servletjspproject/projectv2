@@ -38,6 +38,22 @@ public class CategoryHome {
     }
     
     
+    
+    public Categories getCategory(int id)
+    {
+       String hqlQuery = "from Categories c where c.idCategories = "+id+" ";
+        session.getTransaction().begin();
+        Query query = session.createQuery(hqlQuery);
+        Categories category = (Categories) query.uniqueResult();
+        
+        return category;
+        
+        
+    }
+    
+    
+    
+    
     public  List<Categories> getCategories()
     {
         
@@ -46,7 +62,7 @@ public class CategoryHome {
         session.getTransaction().begin();
         Query query = session.createQuery(hqlQuery);
         categorieses = (ArrayList<Categories>) query.list();
-        session.getTransaction().commit();
+        //session.getTransaction().commit();
         return categorieses;
         
     }
@@ -57,10 +73,11 @@ public class CategoryHome {
     public static void main(String [] args)
     {
         CategoryHome categoryHome = new  CategoryHome();
-        //System.out.println(categoryHome.getCategories().size());
+        System.out.println(categoryHome.getCategories().size());
         
-        Categories categories = new Categories("New Comerms", "\\");
-        categoryHome.addOrUpdateCategory(categories);
+        //Categories categories = new Categories("New Comerms", "\\");
+        //categoryHome.addOrUpdateCategory(categories);
+       System.out.println(categoryHome.getCategory(1).getName());
         
     }
     

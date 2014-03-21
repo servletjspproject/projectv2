@@ -9,6 +9,9 @@
         <url-pattern>/user/profile2.jsp</url-pattern>
         <url-pattern>/profile2.jsp</url-pattern>
     </filter-mapping>
+    <listener>
+        <listener-class>lisener.SessionLisener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>RegisterationServlet</servlet-name>
         <servlet-class>dbpkg.RegisterationServlet</servlet-class>
@@ -105,6 +108,14 @@
         <servlet-name>DeactiveAccount</servlet-name>
         <servlet-class>AccountOperations.DeactiveAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addcategory</servlet-name>
+        <servlet-class>categoryOperations.AddCategory</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>commonAction.LogOut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterationServlet</servlet-name>
         <url-pattern>/RegisterationServlet</url-pattern>
@@ -200,6 +211,14 @@
     <servlet-mapping>
         <servlet-name>DeactiveAccount</servlet-name>
         <url-pattern>/DeactiveAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addcategory</servlet-name>
+        <url-pattern>/AddCategory</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>1</session-timeout>

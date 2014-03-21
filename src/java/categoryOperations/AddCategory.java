@@ -61,17 +61,21 @@ public class AddCategory extends HttpServlet {
                         FileItem fi = (FileItem) i.next();
                         if (!fi.isFormField()) {
                             String fileName = fi.getName();
+                            String imgName = "";
                             if (fileName.lastIndexOf("\\") >= 0) {
-                                file = new File("C:\\project\\categories\\"
-                                        + fileName.substring(fileName.lastIndexOf("\\")));
+                              
+                                        imgName= fileName.substring(fileName.lastIndexOf("\\"));
                             } else {
-                                file = new File("C:\\project\\categories\\"
-                                        + fileName.substring(fileName.lastIndexOf("\\") + 1));
+                                
+                                imgName = fileName.substring(fileName.lastIndexOf("\\") + 1);
                             }
+                            String imgExtension = imgName.split("\\.")[1];
+                            file = new File("D:\\projectsrc\\category\\"
+                                        +productname+"."+imgExtension );
                             fi.write(file);
                             categories.setLogo(file.getPath());
-                            out.println(productname);
-                            out.println(file.getPath());
+                            //out.println(productname);
+                            //out.println(file.getPath());
                         } else {
                             String filedName = fi.getFieldName();
                             if (filedName.equals("name")) {
@@ -80,7 +84,11 @@ public class AddCategory extends HttpServlet {
                             }
 
                         }
+                        
+                      
                     }
+                      categoryHome.addOrUpdateCategory(categories);
+                      response.sendRedirect("admin/AddCategoryAdmin.jsp");
 
                 } catch (Exception ex) {
                     System.out.println(ex);
