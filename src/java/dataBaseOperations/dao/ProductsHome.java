@@ -37,6 +37,20 @@ public class ProductsHome {
     }
     
     
+    public Products getProducts(int productID)
+    {
+        Products products = null;
+         session.getTransaction().begin();
+         String hqlQuery = "from Products p where p.idProducts = "+productID+"";
+         Query query = session.createQuery(hqlQuery);
+         products = (Products) query.uniqueResult();
+         return products;
+        
+    }
+    
+    
+    
+    
 
     public List<Products> getLatestProducts(int productsNumber) {
         ArrayList<Products> productses;
@@ -64,19 +78,21 @@ public class ProductsHome {
 
     public static void main(String[] args) {
         ProductsHome productsHome = new ProductsHome();
-        System.out.println(productsHome.getLatestProducts(7).size());
-        
-        Products products = new Products();
-        products.setName("product7");
-        products.setDescription("sadasds");
-        products.setImg("///");
-        products.setPrice(121212);
-        products.setQuantity(13);
-        products.setPlatform("sad");
+        //System.out.println(productsHome.getLatestProducts(7).size());
+//        
+//        Products products = new Products();
+//        products.setName("product7");
+//        products.setDescription("sadasds");
+//        products.setImg("///");
+//        products.setPrice(121212);
+//        products.setQuantity(13);
+//        products.setPlatform("sad");
        // productsHome.addOrUpdateProduct(products, 5);
         //products.getDescription()
         
-        System.out.println(productsHome.getProductsOFGategory(1).size());
+       // System.out.println(productsHome.getProductsOFGategory(1).size());
+        
+        System.out.println(productsHome.getProducts(1).getName());
         
         
         

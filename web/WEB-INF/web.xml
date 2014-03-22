@@ -25,10 +25,6 @@
         <servlet-class>commonAction.Login</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UserLogOut</servlet-name>
-        <servlet-class>userAction.UserLogOut</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AdminLogOut</servlet-name>
         <servlet-class>adminActions.AdminLogOut</servlet-class>
     </servlet>
@@ -120,6 +116,10 @@
         <servlet-name>ViewProduct</servlet-name>
         <servlet-class>commonAction.ViewProduct</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewProductDetails</servlet-name>
+        <servlet-class>productsOperations.ViewProductDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterationServlet</servlet-name>
         <url-pattern>/RegisterationServlet</url-pattern>
@@ -131,10 +131,6 @@
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UserLogOut</servlet-name>
-        <url-pattern>/UserLogOut</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AdminLogOut</servlet-name>
@@ -227,6 +223,10 @@
     <servlet-mapping>
         <servlet-name>ViewProduct</servlet-name>
         <url-pattern>/ViewProduct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewProductDetails</servlet-name>
+        <url-pattern>/ViewProductDetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>1</session-timeout>

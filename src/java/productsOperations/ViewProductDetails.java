@@ -2,20 +2,24 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package userAction;
+package productsOperations;
 
+import dataBaseOperations.dao.ProductsHome;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import tables.Products;
+import tables.Users;
 
 /**
  *
  * @author abdotalaat
  */
-public class UserLogOut extends HttpServlet {
+public class ViewProductDetails extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -32,16 +36,27 @@ public class UserLogOut extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UserLogOut</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UserLogOut at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           String id = request.getParameter("id");
+           int productID = Integer.parseInt(id);
+           
+            ProductsHome productsHome = new ProductsHome();
+            Products products = productsHome.getProducts(productID);
+            
+            
+            HttpSession session = request.getSession(true);
+            
+            Users users = (Users) session.getAttribute("user");
+            if(users != null)
+            {
+            session.setAttribute("product", products);
+            response.sendRedirect("details.jsp");
+            }
+            else
+            {
+                response.sendRedirect("login.jsp?autho=true");
+            }
+           
+           
         } finally {            
             out.close();
         }

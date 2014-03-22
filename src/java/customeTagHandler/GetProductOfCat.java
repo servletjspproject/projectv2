@@ -81,6 +81,10 @@ public class GetProductOfCat extends SimpleTagSupport {
 
 
             } else {
+                
+                
+                out.println("no products for this category");
+                
             }
 
 

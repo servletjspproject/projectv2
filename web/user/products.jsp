@@ -111,7 +111,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                         <div class="header_right">
                             <ul>
-                                <li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
+                                <li><a href="my_products.jsp"><i  class="cart"></i><span><c:out value="${sessionScope.cart.getProductses().size()}"></c:out></span></a></li>
                             </ul>
                         </div>
 
@@ -145,21 +145,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                       
                     </select> -->
 
-                    <section class="main">
-                        <div class="wrapper-demo">
-                            <div id="dd" class="wrapper-dropdown-5" tabindex="1">Products
-                                <ul class="dropdown">
-                                    <li><a href="#"><i class="icon-user"></i>Heals</a></li>
-                                    <li><a href="#"><i class="icon-cog"></i>Sandels</a></li>
-                                    <li><a href="#"><i class="icon-cog"></i>Boots</a></li>
-                                    <li><a href="#"><i class="icon-cog"></i>Slippers</a></li>
-                                    <li><a href="#"><i class="icon-cog"></i>Flat</a></li>
-                                    <li><a href="#"><i class="icon-cog"></i>New</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
+                   
+                    <cat:DropCategory ></cat:DropCategory>
+                    
                     <!-- jQuery if needed -->
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
                     <script type="text/javascript">

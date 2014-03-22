@@ -4,15 +4,20 @@
  */
 package commonAction;
 
+import dataBaseOperations.dao.ProductsHome;
+import dataBaseOperations.dao.ShoppingCartHome;
 import dataBaseOperations.dao.UsersHome;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import tables.Products;
+import tables.ShoppingCart;
 import tables.Users;
 import utility.ShoppingCartSession;
 
@@ -63,6 +68,18 @@ public class Login extends HttpServlet {
                     session = request.getSession();
 
                     //check if anu product not buyed in the last session
+                    
+                    
+                    ShoppingCartHome cartHome = new ShoppingCartHome();
+                    List<ShoppingCart> shoppingCarts = cartHome.getLatestshShoppingCartsList(user.getIdusers());
+                    
+                    for (ShoppingCart shoppingCart : shoppingCarts) {
+                        ProductsHome productsHome = new ProductsHome();
+                        Products products = productsHome.getProducts(shoppingCart.getProductId());
+                        cart.getProductses().add(products);
+                        
+                    }
+                    
                     
                     
                     session.setAttribute("cart", cart);

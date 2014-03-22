@@ -23,7 +23,7 @@ public class UsersHome {
 
     }
 
-    public boolean addOrUpdateProduct(Users user) {
+    public boolean addOrUpdateUser(Users user) {
         session.getTransaction().begin();
         session.saveOrUpdate(user);
         session.getTransaction().commit();
@@ -55,7 +55,7 @@ public class UsersHome {
         users.setIsActive("1");
         users.setAddress("assaasas");
 
-        usersHome.addOrUpdateProduct(users);
+        usersHome.addOrUpdateUser(users);
         Users  users1 = usersHome.getUser("sds@sdkjs.com", "123");
         System.out.println(users1.getEmail());
 

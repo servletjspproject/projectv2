@@ -107,7 +107,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                         <div class="header_right">
                             <ul>
-                                <li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
+                                <li><a href="my_products.jsp"><i  class="cart"></i><span><c:out value="${sessionScope.cart.getProductses().size()}"></c:out></span></a></li>
                             </ul>
                         </div>
 

@@ -28,6 +28,8 @@ public class SessionLisener implements HttpSessionListener {
     public void sessionDestroyed(HttpSessionEvent se) {
         HttpSession session = se.getSession();
         Users users = (Users) session.getAttribute("user");
+        if(users != null)
+        {
         if (users.getUserType().equals("client")) {
             ShoppingCartSession cart = (ShoppingCartSession) session.getAttribute("cart");
             System.out.println("abdooooo" + users.getFname());
@@ -47,6 +49,7 @@ public class SessionLisener implements HttpSessionListener {
 
 
 
+        }
         }
     }
 }

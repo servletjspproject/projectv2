@@ -36,4 +36,14 @@
       <type>int</type>
     </attribute>
   </tag>
+  <tag>
+    <name>ShowSHoppingList</name>
+    <tag-class>customeTagHandler.ShowSHoppingList</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>DropCategory</name>
+    <tag-class>customeTagHandler.DropCategory</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
 </taglib>

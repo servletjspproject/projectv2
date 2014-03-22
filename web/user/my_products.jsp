@@ -1,5 +1,7 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@taglib  prefix="cart" uri="/WEB-INF/tlds/category" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,7 +108,7 @@
 		</nav>
 	<div class="header_right">
 		<ul>
-			<li><a href="my_products.jsp"><i  class="cart"></i><span>0</span></a></li>
+			<li><a href="my_products.jsp"><i  class="cart"></i><span><c:out value="${sessionScope.cart.getProductses().size()}"></c:out></span></a></li>
 		</ul>
 	</div>
 	<div class="clear"></div>
@@ -124,6 +126,10 @@
 <div class="main_bg">
 <div class="wrap">
 <div class="main">
+    
+    
+    
+    
 	<div class="top_main">
 		<h2>my products</h2>
 	<!--	<a href="#">show all</a> -->
@@ -132,57 +138,13 @@
 	<div class="clear"></div>
 	</div>
 	<!-- start grids_of_3 -->
-	<div class="grids_of_3">
-		<div class="grid1_of_3">
-			<a href="../details.jsp">
-				<img src="../images/pic1.jpg" alt="">
-				<h3>even &amp; odd</h3>
-				<span class="price">$145,99</span>
-			</a>
-		</div>
-		<div class="read_more">
-			<a class="btn" href="">Remove</a>
-		</div>
-		
-		<div class="clear"></div>
-	</div>
+	<cart:ShowSHoppingList ></cart:ShowSHoppingList>
 	
 	<div class="clear"></div>
 	<!-- start grids_of_3 -->
-	<div class="grids_of_3">
-		<div class="grid1_of_3">
-			<a href="../details.jsp">
-				<img src="../images/pic1.jpg" alt="">
-				<h3>even &amp; odd</h3>
-				<span class="price">$145,99</span>
-			</a>
-		</div>
-			<div class="read_more">
-				<a class="btn" href="">Remove</a>
-			</div>
-		<div class="clear"></div>
-	</div>
+	
 
-	<div class="clear"></div>
-	<!-- start grids_of_3 -->
-	<div class="grids_of_3">
-		<div class="grid1_of_3">
-			<a href="../details.jsp">
-				<img src="../images/pic4.jpg" alt="">
-				<h3>buffalo decollete</h3>
-				<span class="price">$145,99</span>
-			</a>
-		</div>
-		<div class="read_more">
-			<a class="btn" href="">Remove</a>
-		</div>
-		<div class="clear"></div>
-		
-		<div class="read_more">
-			<a class="btn" href="">Buy</a>
-		</div>
-	</div>
-	<div class="clear"></div>
+	
 
 <!-- start footer -->
 <div class="footer_bg">

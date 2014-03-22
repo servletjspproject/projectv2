@@ -6,7 +6,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-<c:out value="${requestScope.latestProduct.getProductses().size()}" ></c:out>
+
 
 
 
@@ -32,10 +32,10 @@
                                         <h3 class="active"> <c:out value="${product.getDescription()}"></c:out>
                                         </h3>
                                         <h3>
-                                            <a class="ei_icons" href="details.jsp?"><img src="images/icon_1.png" alt=""></a>
+                                            <a class="ei_icons" href="ViewProductDetails?id=<c:out value="${product.getIdProducts()}"></c:out>"><img src="images/icon_1.png" alt=""></a>
 
-                                            <a class="ei_icons" href="details.jsp?"><img src="images/icon_3.png" alt=""></a>
-                                            <a class="ei_icons" href="details.jsp?"><img src="images/icon_4.png" alt=""></a>
+                                            <a class="ei_icons" href="ViewProductDetails?id=<c:out value="${product.getIdProducts()}"></c:out>"><img src="images/icon_3.png" alt=""></a>
+                                            <a class="ei_icons" href="ViewProductDetails?id=<c:out value="${product.getIdProducts()}"></c:out>"><img src="images/icon_4.png" alt=""></a>
                                         </h3>
                                     </div>
                                 </li>
