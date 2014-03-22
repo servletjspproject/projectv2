@@ -21,7 +21,7 @@ public class ProductsHome {
     Session session;
 
     public ProductsHome() {
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
     }
 

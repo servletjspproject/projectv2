@@ -23,7 +23,7 @@ public class CategoryHome {
         Session session;
 
     public CategoryHome() {
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
     }
     

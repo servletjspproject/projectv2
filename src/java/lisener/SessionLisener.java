@@ -31,11 +31,14 @@ public class SessionLisener implements HttpSessionListener {
         if(users != null)
         {
         if (users.getUserType().equals("client")) {
+            
+            
             ShoppingCartSession cart = (ShoppingCartSession) session.getAttribute("cart");
             System.out.println("abdooooo" + users.getFname());
 
             List<Products> productses = cart.getProductses();
             ShoppingCartHome shoppingCartHome = new ShoppingCartHome();
+            shoppingCartHome.deleteLatestshShoppingCartsList(users.getIdusers());
             for (Products products : productses) {
 
                 ShoppingCart shoppingCart = new ShoppingCart();
@@ -43,7 +46,7 @@ public class SessionLisener implements HttpSessionListener {
                 shoppingCart.setProductName(products.getName());
                 shoppingCart.setProductId(products.getIdProducts());
                 shoppingCart.setUserId(users.getIdusers());
-                shoppingCartHome.addOrUpdateShoppingCartHome(shoppingCart);
+               shoppingCartHome.addOrUpdateShoppingCartHome(shoppingCart);
 
             }
 

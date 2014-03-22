@@ -24,7 +24,7 @@ public class ShoppingCartHome {
      Session session;
 
     public ShoppingCartHome() {
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
     }
 
@@ -45,6 +45,16 @@ public class ShoppingCartHome {
         return shoppingCarts;
     }
     
+    public int deleteLatestshShoppingCartsList(int userID) {
+        
+        String hqlQuery = "delete from  shopping_cart  where user_id = "+userID+" and isPay = 0";
+        
+        session.getTransaction().begin();
+        Query query = session.createSQLQuery(hqlQuery);
+        int result = query.executeUpdate();
+        session.getTransaction().commit();
+        return result;
+    }
     
     
     
@@ -62,7 +72,7 @@ public class ShoppingCartHome {
         ShoppingCartHome cartHome = new ShoppingCartHome();
         //cartHome.addOrUpdateShoppingCartHome(shoppingCart);
         
-        System.out.println(cartHome.getLatestshShoppingCartsList(4).size());
+        cartHome.deleteLatestshShoppingCartsList(4);
         
         
     }

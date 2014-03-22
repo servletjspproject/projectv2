@@ -20,7 +20,7 @@ public class ContactUsHome {
      Session session;
 
     public ContactUsHome() {
-        session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session = HibernateUtil.getSessionFactory().openSession();
 
     }
     

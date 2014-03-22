@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
     String mail;
     String pass;
     HttpSession session;
-    ShoppingCartSession cart = new ShoppingCartSession();
+    ShoppingCartSession cart ;
 
     /**
      * Processes requests for both HTTP
@@ -47,6 +47,7 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
+            cart = new ShoppingCartSession();
             
             mail = request.getParameter("logInMail");
             pass = request.getParameter("logPass");
