@@ -135,6 +135,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <span><label>Category Name</label></span>
 
                                         <span>
+                                            
                                             <label>
                                                 <input name="name" placeholder="i.e: Heals" type="text" tabindex="1" required="" autofocus="">
                                             </label>
