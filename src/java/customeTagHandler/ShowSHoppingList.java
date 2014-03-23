@@ -36,12 +36,14 @@ public class ShowSHoppingList extends SimpleTagSupport {
             
            
             ShoppingCartSession cartSession = (ShoppingCartSession) getJspContext().getAttribute("cart", PageContext.SESSION_SCOPE);
+            if(cartSession != null)
+            {
             ArrayList<Products> productses = cartSession.getProductses();
             
             
             for (Products products : productses) {
                 
-                out.println(" <div class=\"grids_of_3\">\n" +
+                out.println(" <div id='"+products.getIdProducts()+"' class=\"grids_of_3\">\n" +
 "		<div class=\"grid1_of_3\">\n" +
 "			<a href=\"../details.jsp\">\n" +
 "				<img src=\"../images/pic1.jpg\" alt=\"\">\n" +
@@ -50,10 +52,12 @@ public class ShowSHoppingList extends SimpleTagSupport {
 "			</a>\n" +
 "		</div>\n" +
 "		<div class=\"read_more\">\n" +
-"			<a class=\"btn\" href=\"\">Remove</a>\n" +
+"			<a class=\"btn\" href='../RemoveElementShoppingCart?id="+products.getIdProducts()+"'>Remove</a>\n" +
 "		</div>\n" +
 "		\n" +
-"		<div class=\"clear\"></div>\n" +
+"		<div class=\"clear\"></div><div class=\"read_more\">\n" +
+"			<a class=\"btn\" href=\"\">Buy</a>\n" +
+"		</div>\n" +
 "	</div>");
                         
                 
@@ -61,7 +65,7 @@ public class ShowSHoppingList extends SimpleTagSupport {
             
             
            
-            
+            }
        
             
             

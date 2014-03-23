@@ -72,6 +72,20 @@ public class ProductsHome {
         return productses;
     }
     
+    
+    
+    public List<Products> getAllProducts()
+    {
+        ArrayList<Products> productses;
+        String hqlQuery = "from Products p ";
+        session.getTransaction().begin();
+        Query query = session.createQuery(hqlQuery);
+        productses = (ArrayList<Products>) query.list();
+        // session.getTransaction().commit();
+        return productses;
+    }
+    
+    
    
     
     
@@ -92,7 +106,10 @@ public class ProductsHome {
         
        // System.out.println(productsHome.getProductsOFGategory(1).size());
         
-        System.out.println(productsHome.getProducts(1).getName());
+        //System.out.println(productsHome.getProducts(1).getName());
+        
+        
+        System.out.println(productsHome.getAllProducts().size());
         
         
         

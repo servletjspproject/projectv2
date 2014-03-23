@@ -51,7 +51,7 @@ public class GetProductOfCat extends SimpleTagSupport {
                 for (i = 0; i < productses.size(); i++) {
                     Products p = productses.get(i);
                     out.println("<div class=\"grid1_of_3\">\n"
-                            + "			<a href=\"../details.jsp\">\n"
+                            + "			<a href=\"../ViewProductDetails?id="+p.getIdProducts()+"\">\n"
                             + "				<img src=\"../"+p.getImg()+"\" alt=\"\">\n"
                             + "				<h3>"+p.getName()+"</h3>\n"
                             + "				<span class=\"price\">$145,99</span>\n"

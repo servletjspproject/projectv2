@@ -147,6 +147,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                    
                     <cat:DropCategory ></cat:DropCategory>
+                    <div class="clear"></div>
+		
+		
                     
                     <!-- jQuery if needed -->
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

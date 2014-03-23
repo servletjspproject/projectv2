@@ -4,12 +4,19 @@
  */
 package userAction;
 
+import dataBaseOperations.dao.ShoppingCartHome;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import tables.Products;
+import tables.ShoppingCart;
+import tables.Users;
+import utility.ShoppingCartSession;
 
 /**
  *
@@ -32,16 +39,25 @@ public class BuyProducts extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet BuyProducts</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet BuyProducts at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+             HttpSession session = request.getSession();
+        Users users = (Users) session.getAttribute("user");
+            ShoppingCartSession cart = (ShoppingCartSession) session.getAttribute("cart");
+            System.out.println("abdooooo" + users.getFname());
+
+            List<Products> productses = cart.getProductses();
+            ShoppingCartHome shoppingCartHome = new ShoppingCartHome();
+           shoppingCartHome.deleteLatestshShoppingCartsList(users.getIdusers());
+            for (Products products : productses) {
+
+                ShoppingCart shoppingCart = new ShoppingCart();
+                shoppingCart.setIsPay(1);
+                shoppingCart.setProductName(products.getName());
+                shoppingCart.setProductId(products.getIdProducts());
+                shoppingCart.setUserId(users.getIdusers());
+               shoppingCartHome.addOrUpdateShoppingCartHome(shoppingCart);
+
+            }
+            productses.clear();
         } finally {            
             out.close();
         }

@@ -8,6 +8,8 @@
         <filter-name>LoginFilter</filter-name>
         <url-pattern>/user/profile2.jsp</url-pattern>
         <url-pattern>/profile2.jsp</url-pattern>
+        <url-pattern>/user/my_products.jsp</url-pattern>
+        <url-pattern>/my_products.jsp</url-pattern>
     </filter-mapping>
     <listener>
         <listener-class>lisener.SessionLisener</listener-class>
@@ -229,6 +231,6 @@
         <url-pattern>/ViewProductDetails</url-pattern>
     </servlet-mapping>
     <session-config>
-        <session-timeout>1</session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 </web-app>

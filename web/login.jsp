@@ -62,7 +62,7 @@
 		<div class="menu">
 			<ul>
 				<li class="active"><a href="index.jsp">Home</a></li>
-				<li><a href="products.jsp">products</a></li>
+				<li><a href="user/products.jsp">products</a></li>
 				<li><a href="user/about.jsp">about</a></li>
 				<li><a href="index.jsp">pages</a></li>
 				
@@ -76,7 +76,7 @@
 		<nav id="menu-left">
 			<ul>
 				<li><a href="index.jsp">Home</a></li>
-				<li><a href="products.jsp">products</a></li>
+				<li><a href="user/products.jsp">products</a></li>
 				<li><a href="user/about.jsp">about</a></li>
 				<li><a href="index.jsp">pages</a></li>
 				<li><a href="blog.jsp">blog</a></li>

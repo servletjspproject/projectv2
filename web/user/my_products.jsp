@@ -33,6 +33,7 @@
 	</script>
 </head>
 <body>
+     
 <!-- start header -->
 <div class="top_bg">
 <div class="wrap">
@@ -138,9 +139,12 @@
 	<div class="clear"></div>
 	</div>
 	<!-- start grids_of_3 -->
+        
+       
 	<cart:ShowSHoppingList ></cart:ShowSHoppingList>
 	
 	<div class="clear"></div>
+        
 	<!-- start grids_of_3 -->
 	
 
