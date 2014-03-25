@@ -43,7 +43,7 @@ public class AddElementShoppingCart extends HttpServlet {
             ShoppingCartSession shoppingCartSession = (ShoppingCartSession) session.getAttribute("cart");
             shoppingCartSession.getProductses().add(products);
             
-            out.println("Done");
+            response.sendRedirect("user/products.jsp?id="+products.getCategories().getIdCategories()+"");
             
             
             

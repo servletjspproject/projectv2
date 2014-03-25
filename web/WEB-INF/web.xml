@@ -10,6 +10,7 @@
         <url-pattern>/profile2.jsp</url-pattern>
         <url-pattern>/user/my_products.jsp</url-pattern>
         <url-pattern>/my_products.jsp</url-pattern>
+        <url-pattern>/details.jsp</url-pattern>
     </filter-mapping>
     <listener>
         <listener-class>lisener.SessionLisener</listener-class>

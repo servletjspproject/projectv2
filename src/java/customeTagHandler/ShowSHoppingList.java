@@ -28,47 +28,50 @@ public class ShowSHoppingList extends SimpleTagSupport {
     @Override
     public void doTag() throws JspException {
         JspWriter out = getJspContext().getOut();
-        
+
         try {
-           
-            
-            
-            
-           
+
+
+
+
+
+
+            int totalPrice = 0;
             ShoppingCartSession cartSession = (ShoppingCartSession) getJspContext().getAttribute("cart", PageContext.SESSION_SCOPE);
-            if(cartSession != null)
-            {
-            ArrayList<Products> productses = cartSession.getProductses();
-            
-            
-            for (Products products : productses) {
-                
-                out.println(" <div id='"+products.getIdProducts()+"' class=\"grids_of_3\">\n" +
-"		<div class=\"grid1_of_3\">\n" +
-"			<a href=\"../details.jsp\">\n" +
-"				<img src=\"../images/pic1.jpg\" alt=\"\">\n" +
-"				<h3>even &amp; odd</h3>\n" +
-"				<span class=\"price\">$145,99</span>\n" +
-"			</a>\n" +
-"		</div>\n" +
-"		<div class=\"read_more\">\n" +
-"			<a class=\"btn\" href='../RemoveElementShoppingCart?id="+products.getIdProducts()+"'>Remove</a>\n" +
-"		</div>\n" +
-"		\n" +
-"		<div class=\"clear\"></div><div class=\"read_more\">\n" +
-"			<a class=\"btn\" href=\"\">Buy</a>\n" +
-"		</div>\n" +
-"	</div>");
-                        
-                
+            if (cartSession != null) {
+                ArrayList<Products> productses = cartSession.getProductses();
+
+
+                for (Products products : productses) {
+                    totalPrice = totalPrice + products.getPrice();
+
+                    out.println(" <div id='" + products.getIdProducts() + "' class=\"grids_of_3\">\n"
+                            + "		<div class=\"grid1_of_3\">\n"
+                            + "			<a href=\"../details.jsp\">\n"
+                            + "				<img src=\"../images/pic1.jpg\" alt=\"\">\n"
+                            + "				<h3>even &amp; odd</h3>\n"
+                            + "				<span class=\"price\">$145,99</span>\n"
+                            + "			</a>\n"
+                            + "		</div>\n"
+                            + "		<div class=\"read_more\">\n"
+                            + "			<a class=\"btn\" href='../RemoveElementShoppingCart?id=" + products.getIdProducts() + "'>Remove</a>\n"
+                            + "		</div>\n"
+                            + "		\n"
+                            + "		<div class=\"clear\"></div>	</div>");
+
+
+                }
+
+                out.println("<div class=\"clear\"></div>");
+                out.println("the totla price is:  " + totalPrice + "");
+                out.println("<div class=\"clear\"></div>");
+                out.println("<div class=\"read_more\"><a class=\"btn\" href=\"../BuyProducts\">Buy</a></div>");
+
+
             }
-            
-            
-           
-            }
-       
-            
-            
+
+
+
 
             JspFragment f = getJspBody();
             if (f != null) {

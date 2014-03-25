@@ -113,7 +113,15 @@ public class LoginFilter implements Filter {
         {
           //  RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/../index.jsp");
             //dispatcher.forward(request, response);
-            httpServletResponse.sendRedirect("../login.jsp?autho=true");
+            if(httpServletRequest.getRequestURI().contains("details.jsp"))
+            {
+                httpServletResponse.sendRedirect("login.jsp?autho=true");
+            }
+            else
+            {
+                httpServletResponse.sendRedirect("../login.jsp?autho=true");
+            }
+            
         }
         
         

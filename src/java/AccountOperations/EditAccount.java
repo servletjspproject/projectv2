@@ -4,12 +4,14 @@
  */
 package AccountOperations;
 
+import dataBaseOperations.dao.UsersHome;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import tables.Users;
 
 /**
  *
@@ -33,15 +35,15 @@ public class EditAccount extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet EditAccount</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet EditAccount at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+           
+            
+            Users users = new Users();
+            
+            UsersHome usersHome = new UsersHome();
+            usersHome.addOrUpdateUser(users);
+            out.println("1");
+            
+            
         } finally {            
             out.close();
         }

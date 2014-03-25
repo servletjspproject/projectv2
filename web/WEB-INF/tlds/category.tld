@@ -46,4 +46,9 @@
     <tag-class>customeTagHandler.DropCategory</tag-class>
     <body-content>scriptless</body-content>
   </tag>
+  <tag>
+    <name>NewTagHandler</name>
+    <tag-class>customeTagHandler.NewTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
 </taglib>

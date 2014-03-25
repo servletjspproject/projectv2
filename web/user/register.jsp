@@ -204,16 +204,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 <!-- Form 
 		 Sign up for the first time and enter his profile data (name, birthday, password, job, e-mail, credit balance, address, interests, …  )
 		 -->	
-		
+               
 
 		 
-			<form id="registration_form" action="Register" method="post">
+                 <form id="registration_form"   enctype="multipart/form-data"  action="../Register" method="post">
 
 			
 			
 			
-<input type="file" name="uploadField"/>
-<input type="button" value="send"/>
+
 
 
 
@@ -254,6 +253,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <input name="job" placeholder="your job:" type="text" tabindex="1" required="" autofocus="">
 					</label>
 				</div>
+                     <div>
+					<label>
+                        <input name="mobile" placeholder="your mobile:" type="text" tabindex="1" required="" autofocus="">
+					</label>
+				</div>
 				
 				<div>
 					<label>
@@ -274,17 +278,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>						
 				<div>
 					<label>
-						<input name="pass1" placeholder="retype password" type="password" tabindex="4" required="">
+						<input name="pass11" placeholder="retype password" type="password" tabindex="4" required="">
 					</label>
 				</div>
-				<div>
-					<label>
-                        <input type="checkbox" name="interests" value="Nokia">Nokia<br>
-						<input type="checkbox" name="interests" value="Samsung">Samsung<br>
-						<input type="checkbox" name="interests" value="SonyEricsson">Sony Ericsson<br>
-						<input type="checkbox" name="interests" value="Alcatel">Alcatel<br>
-					</label>
-				</div>
+				
+
+upload image
+<input type="file" name="image" value="" />
 
 				<div>
 					<input type="submit" value="create an account" id="register-submit">

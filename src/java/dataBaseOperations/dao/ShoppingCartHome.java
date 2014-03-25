@@ -45,6 +45,19 @@ public class ShoppingCartHome {
         return shoppingCarts;
     }
     
+    
+    public List<ShoppingCart> getUserHistory(int userID) {
+        ArrayList<ShoppingCart> shoppingCarts;
+        String hqlQuery = "from ShoppingCart c where c.userId = "+userID+" and c.isPay = 1";
+        session.getTransaction().begin();
+        Query query = session.createQuery(hqlQuery);
+        shoppingCarts = (ArrayList<ShoppingCart>) query.list();
+        return shoppingCarts;
+    }
+    
+    
+    
+    
     public int deleteLatestshShoppingCartsList(int userID) {
         
         String hqlQuery = "delete from  shopping_cart  where user_id = "+userID+" and isPay = 0";

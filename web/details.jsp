@@ -183,8 +183,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                       <h5>price is : <c:out value="${sessionScope.product.getPrice()}"></c:out></h5>
 					<div class="available">
 						<div class="btn_form">
-                                                    <form >
-                                                        <input type="button" value="Add now" title="" onclick="addTolist()" />
+                                                    <form  action="AddElementShoppingCart">
+                                                        <input type="submit" value="Add now" title="" onclick="" />
 							</form>
 						</div>
 						<p><c:out value="${sessionScope.product.getDescription()}"></c:out></p>

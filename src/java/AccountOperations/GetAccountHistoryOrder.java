@@ -4,12 +4,15 @@
  */
 package AccountOperations;
 
+import dataBaseOperations.dao.UsersHome;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import tables.ShoppingCart;
 
 /**
  *
@@ -32,16 +35,14 @@ public class GetAccountHistoryOrder extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet GetAccountHistoryOrder</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet GetAccountHistoryOrder at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            
+            
+            String id = request.getParameter("id");
+            int userID = Integer.parseInt(id);
+            
+            
+            UsersHome usersHome = new UsersHome();
+            List<ShoppingCart> history = usersHome.getUserHistory(userID); 
         } finally {            
             out.close();
         }

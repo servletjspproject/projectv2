@@ -86,7 +86,7 @@ License: Creative Commons Attribution 3.0 Unported
 				  <c:choose>
                             <c:when test="${sessionScope.user != null}">
                                 
-                            <li><a href="user/profile2.jsp">profile</a></li>
+                            <li><a href="profile2.jsp">profile</a></li>
                             </c:when>
                         </c:choose>
 				<!--<li><a href="blog.jsp">blog</a></li>-->

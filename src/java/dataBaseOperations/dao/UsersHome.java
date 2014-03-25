@@ -5,9 +5,11 @@
 package dataBaseOperations.dao;
 
 import dataBaseOperations.HibernateUtil;
+import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import tables.Products;
+import tables.ShoppingCart;
 import tables.Users;
 
 /**
@@ -29,11 +31,23 @@ public class UsersHome {
         session.getTransaction().commit();
         return true;
     }
+    
+    
+    
+    public List<ShoppingCart> getUserHistory(int userID) {
+        
+        ShoppingCartHome shoppingCartHome = new ShoppingCartHome();
+        return  shoppingCartHome.getUserHistory(userID);
+        
+    }
+    
+    
+    
 
     public Users getUser(String email, String password) {
         Users user = null;
         session.getTransaction().begin();
-        String hqlQuery = "from Users u where u.email='" + email + "' and u.password='" + password + "'";
+        String hqlQuery = "from Users u where u.email='" + email + "' and u.password='" + password + "' and isActive= '1'";
         Query query = session.createQuery(hqlQuery);
         user = (Users) query.uniqueResult();
         session.getTransaction().commit();
@@ -43,12 +57,12 @@ public class UsersHome {
     public static void main(String[] args) {
         Users users = new Users();
         UsersHome usersHome = new UsersHome();
-        users.setFname("abdo");
-        users.setLname("talaat");
-        users.setEmail("sds@sdkjs.com");
+        users.setFname("abd1o");
+        users.setLname("tala1at");
+        users.setEmail("sds@s1dkjs.com");
         users.setCredit(1212);
         users.setGender("male");
-        users.setMobile("123223");
+        users.setMobile("1231223");
         users.setJob("asdsad");
         users.setPassword("123");
         users.setUserType("client");
@@ -56,8 +70,8 @@ public class UsersHome {
         users.setAddress("assaasas");
 
         usersHome.addOrUpdateUser(users);
-        Users  users1 = usersHome.getUser("sds@sdkjs.com", "123");
-        System.out.println(users1.getEmail());
+      //  Users  users1 = usersHome.getUser("sds@sdkjs.com", "123");
+        //System.out.println(users1.getEmail());
 
 
     }

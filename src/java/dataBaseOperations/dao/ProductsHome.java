@@ -27,6 +27,7 @@ public class ProductsHome {
 
     public boolean addOrUpdateProduct(Products products, int categoryID) {
 
+        session = HibernateUtil.getSessionFactory().openSession();
         CategoryHome categoryHome = new CategoryHome();
         Categories category = categoryHome.getCategory(categoryID);
         products.setCategories(category);
@@ -41,7 +42,7 @@ public class ProductsHome {
     {
         Products products = null;
          session.getTransaction().begin();
-         String hqlQuery = "from Products p where p.idProducts = "+productID+"";
+         String hqlQuery = "from Products p where quantity>0 and p.idProducts = "+productID+"";
          Query query = session.createQuery(hqlQuery);
          products = (Products) query.uniqueResult();
          return products;
@@ -54,7 +55,7 @@ public class ProductsHome {
 
     public List<Products> getLatestProducts(int productsNumber) {
         ArrayList<Products> productses;
-        String hqlQuery = "from Products ORDER BY idProducts DESC";
+        String hqlQuery = "from Products where quantity>0 ORDER BY idProducts DESC";
         session.getTransaction().begin();
         Query query = session.createQuery(hqlQuery).setMaxResults(productsNumber);
         productses = (ArrayList<Products>) query.list();
@@ -64,7 +65,7 @@ public class ProductsHome {
     
     public List<Products> getProductsOFGategory(int categoryID) {
         ArrayList<Products> productses;
-        String hqlQuery = "from Products p where p.categories.idCategories = "+categoryID+" ";
+        String hqlQuery = "from Products p where p.quantity>0 and p.categories.idCategories = "+categoryID+" ";
         session.getTransaction().begin();
         Query query = session.createQuery(hqlQuery);
         productses = (ArrayList<Products>) query.list();

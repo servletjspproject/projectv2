@@ -226,23 +226,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div>
                                         <span><label>password</label></span>
                                         <span>
-                                            <input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true" value=${user.password}>
+                                            <input id="pa" name="passwordProfile" type="password" class="textbox" readOnly="true" value=${user.password}>
                                             <input type="button" value="Edit" onclick="document.getElementById('pa').readOnly = false;">
                                         </span>
                                     </div>							
-                                    <div>
-                                        <label>
-
-                                            <input type="checkbox" name="interests" value="Heals">Heals<br>
-                                            <input type="checkbox" name="interests" value="Sandels">Sandels<br>
-                                            <input type="checkbox" name="interests" value="Boots">Boots<br>
-                                            <input type="checkbox" name="interests" value="Slippers">Slippers<br>
-                                            <input type="checkbox" name="interests" value="Flat">Flat<br>
-                                            <input type="checkbox" name="interests" value="New Comers">New Comers<br>
-
-                                        </label>
-
-                                    </div>
+                                   
                                     <div>
                                         <span>
                                             <input type="submit" value="Save">

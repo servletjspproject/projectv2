@@ -46,73 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </script>
 
 
-        <script type="text/javascript">
-
-            function dechange(v)
-            {
-                $(v).attr("src", "../images/deactive.png");
-            }
-            function rechange(v)
-            {
-                $(v).attr("src", "../images/reload.gif");
-            }
-            function change(v)
-            {
-                $(v).attr("src", "../images/active.png");
-            }
-            function activeDeactiveUser(ev)
-            {
-                
-               var id = $(this).attr("id");
-               alert(id);
-                var src = $(ev).attr("src");
-                var imgapth = src.split("/");
-                var imgname = imgapth[1];
-                var servletName;
-                rechange(ev);
-                if (imgname == "active.png")
-                {
-                    servletName = "../ActiveAccount";
-                }
-                else
-                {
-                    servletName = "../DeactiveAccount";
-                }
-
-
-
-                $.ajax({
-                    url: "" + servletName + "", //give your URL here
-                    data: {userID: "your name"}, //(optional) if you wish you can send this data to server, just like this.
-                    success: function(data) {
-
-                        
-                        if (data.trim() == "1" )
-                        {
-                            setTimeout(function() {
-
-                                dechange(ev);
-                            }, 1000);
-
-                        }
-                        else
-                        {
-                            setTimeout(function() {
-
-                               change(ev);
-                            }, 1000);
-                            
-                        }
-
-                    }
-                });
-
-
-
-
-            }
-
-        </script>
+        
         <style>
         .imgd:hover {
   border: solid 1px red;
@@ -209,17 +143,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
                             <thead>
                                 <tr>
-                                    <th class="nosort">ID</h1></th>
+                                   
                                     <th>Name</th>
-                                    <th>Phone</th>
-                                    <th>Email</th>
-                                    <th>Show</th>
-                                    <th>Delete</th>
-                                    <th>Activity</th>
-                                    <th>Balance</th>
-                                    <th>History</th>
-                                    <th>Last Access</th>
-                                    <th>Rating</th>
+                                    <th>price</th>
+                                    <th>category</th>
+                                   
 
                                 </tr>
                             </thead>
@@ -227,43 +155,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                   
                                   <tr>
-                                    <td>111</td>
+                                   
                                     <td>Ezekiel Hart</td>
                                     <td>(627) 536-4760</td>
                                     <td>tortor@est.ca</td>
-                                    <td><img class="imgd" src="../images/edit.png" alt="Show/Edit" width="32" height="32"></td>
-                                    <td><img class="imgd" src="../images/delete.png" alt="Delete" width="32" height="32"></td>
-                                    <td id=1><img class="imgd" src="../images/active.png" id="111" alt="Active" style="cursor: pointer" width="32" height="32"  onclick="activeDeactiveUser(this)"></td>
-                                    <td>$73,229</td>
-                                    <td><img class="imgd" src="../images/history.png" alt="History" width="32" height="32"></td>
-                                    <td>October 20, 2006</td>
-                                    <td>6.9</td>
+                                   
                                 </tr>
                                   <tr>
-                                    <td>111</td>
+                                   
                                     <td>Ezekiel Hart</td>
                                     <td>(627) 536-4760</td>
                                     <td>tortor@est.ca</td>
-                                    <td><img class="imgd" src="../images/edit.png" alt="Show/Edit" width="32" height="32"></td>
-                                    <td><img class="imgd" src="../images/delete.png" alt="Delete" width="32" height="32"></td>
-                                    <td id=1><img class="imgd" src="../images/active.png" id="111" alt="Active" style="cursor: pointer" width="32" height="32"  onclick="activeDeactiveUser(this)"></td>
-                                    <td>$73,229</td>
-                                    <td><img class="imgd" src="../images/history.png" alt="History" width="32" height="32"></td>
-                                    <td>October 20, 2006</td>
-                                    <td>6.9</td>
+                                   
                                 </tr>
                                   <tr>
-                                    <td>111</td>
+                                   
                                     <td>Ezekiel Hart</td>
                                     <td>(627) 536-4760</td>
                                     <td>tortor@est.ca</td>
-                                    <td><img class="imgd" src="../images/edit.png" alt="Show/Edit" width="32" height="32"></td>
-                                    <td><img class="imgd" src="../images/delete.png" alt="Delete" width="32" height="32"></td>
-                                    <td id=1><img class="imgd" src="../images/active.png" id="12" alt="Active" style="cursor: pointer" width="32" height="32"  onclick="activeDeactiveUser(this)"></td>
-                                    <td>$73,229</td>
-                                    <td><img class="imgd" src="../images/history.png" alt="History" width="32" height="32"></td>
-                                    <td>October 20, 2006</td>
-                                    <td>6.9</td>
+                                   
                                 </tr>
                             </tbody>
                         </table>
