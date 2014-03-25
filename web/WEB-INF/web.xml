@@ -123,6 +123,10 @@
         <servlet-name>ViewProductDetails</servlet-name>
         <servlet-class>productsOperations.ViewProductDetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteUser</servlet-name>
+        <servlet-class>AccountOperations.DeleteUser</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisterationServlet</servlet-name>
         <url-pattern>/RegisterationServlet</url-pattern>
@@ -230,6 +234,10 @@
     <servlet-mapping>
         <servlet-name>ViewProductDetails</servlet-name>
         <url-pattern>/ViewProductDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteUser</servlet-name>
+        <url-pattern>/DeleteUser</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>30</session-timeout>

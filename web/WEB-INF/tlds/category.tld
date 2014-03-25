@@ -47,8 +47,49 @@
     <body-content>scriptless</body-content>
   </tag>
   <tag>
+    <name>DropCategory</name>
+    <tag-class>customeTagHandler.DropCategory</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>myProducts</name>
+    <tag-class>customeTagHandler.myProducts</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
     <name>NewTagHandler</name>
     <tag-class>customeTagHandler.NewTagHandler</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>editProduct</name>
+    <tag-class>customeTagHandler.editProduct</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>myCategory</name>
+    <tag-class>customeTagHandler.myCategory</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>editCategory</name>
+    <tag-class>customeTagHandler.editCategory</tag-class>
+    <body-content>scriptless</body-content>
+  </tag>
+  <tag>
+    <name>EditProductn</name>
+    <tag-class>customeTagHandler.EditProductn</tag-class>
+    <body-content>scriptless</body-content>
+    <attribute>
+      <name>id</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+  <tag>
+    <name>ShowClients</name>
+    <tag-class>customeTagHandler.ShowClients</tag-class>
     <body-content>scriptless</body-content>
   </tag>
 </taglib>

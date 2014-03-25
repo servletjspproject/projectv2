@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author abdotalaat
  */
-public class DeactiveAccount extends HttpServlet {
+public class DeleteUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -33,20 +33,14 @@ public class DeactiveAccount extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-           
             String id = request.getParameter("userID");
             int userID = Integer.parseInt(id);
             UsersHome usersHome = new UsersHome();
-            boolean b = usersHome.deactiveAccount(userID);
-            if(b)
-            {
-                out.println("1");
-            }
-            else
-            {
-                out.println("2");
-            }
-            
+             boolean b = usersHome.deleteUser(userID);
+             if(b)
+             {
+                 out.println("1");
+             }
         } finally {            
             out.close();
         }

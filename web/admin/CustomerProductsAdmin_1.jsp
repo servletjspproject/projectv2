@@ -1,23 +1,16 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE HTML>
-<%@taglib prefix="product" uri="/WEB-INF/tlds/category" %>
 
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>The Fooseshoes Website Template | Contact :: w3layouts</title>
+<title>The Fooseshoes Website Template | Products :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
-<script src="../js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -25,8 +18,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="../js/easing.js"></script>
-<script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -42,9 +35,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="../images/logo.png" alt=""/></a>
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
 		</div>
-		 <div class="log_reg">
+		<div class="log_reg">
 				<ul>
 					<li><a href="login.html">Log Out</a> </li>
 				
@@ -82,6 +75,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="clear"></div>
 			</ul>
 		</div>
+		
 		<div id="smart_nav">
 			<a class="navicon" href="#menu-left"> </a>
 		</div>
@@ -91,14 +85,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="products.html">products</a></li>
 				<li><a href="about.html">about</a></li>
 				<li><a href="index.html">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
+				<li><a href="profile2.html">profile</a></li>
+				<!--<li><a href="blog.html">blog</a></li>-->
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="profile.html">profile</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
 	<div class="header_right">
+		<ul>
 		
+		</ul>
 	</div>
 	<div class="clear"></div>
 </div>
@@ -106,79 +102,73 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- start top_bg -->
 <div class="top_bg">
 <div class="wrap">
-
+<div class="main_top">
+	<h2 class="style">User's products</h2>
+</div>
 </div>
 </div>
 <!-- start main -->
 <div class="main_bg">
 <div class="wrap">
 <div class="main">
-	<div class="contact">				
-				<div class="contact_left">
-					<div class="contact_info">
-			    	 	<h3></h3>
-			    	 		<div class="map">
-								<img src="../images/product.png" alt=""></br>
-					   		</div>
-      				</div>
-      			<div class="company_address">
-				   </div>
-				</div>				
-				<div class="contact_right">
-				  <div class="contact-form">
-				  	<h3>Product Information</h3>
-					    <form method="post" action="contact-post.html">
-						
-						<div>
-						    	<span><label>Product Thumbnail</label></span>
-											
-                                <input type="file" name="uploadField"/>
-								
-                                
-						    	<span>
+	<div class="top_main">
+		
+	<!--	<a href="#">show all</a> -->
+		
 
-								</span>
-						    </div>
-							
-                                                <product:EditProductn id="${param.id}"></product:EditProductn>					
-			
-						   <div>
-						   		<span>
-									<input type="submit" value="Save">
-									<input type="button" value="Cancel">
-								</span>
-						  </div>
-					    </form>
-				    </div>
-  				</div>		
-  				<div class="clear"></div>		
-		  </div>
-</div>
-</div>
-</div>
-<!-- start footer -->
-<div class="footer_mid">
-<div class="wrap">
-<div class="footer">
-	<div class="f_search">
-		<form>
-			<input type="text" value="" placeholder="Enter email for newsletter" />
-			<input type="submit" value=""/>
-		</form>
+	<div class="clear"></div>
 	</div>
-	<div class="soc_icons">
-			<ul>
-				<li><a class="icon1" href="#"></a></li>
-				<li><a class="icon2" href="#"></a></li>
-				<li><a class="icon3" href="#"></a></li>
-				<li><a class="icon4" href="#"></a></li>
-				<li><a class="icon5" href="#"></a></li>
-			</ul>	
+	<!-- start grids_of_3 -->
+	<div class="grids_of_3">
+		<div class="grid1_of_3">
+			<a href="details.html">
+				<img src="images/pic1.jpg" alt="">
+				<h3>even &amp; odd</h3>
+				<span class="price">$145,99</span>
+			</a>
+		</div>
+		<div class="read_more">
+			<a class="btn" href="">It was purchased 3 days ago</a>
+		</div>
+		
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+	<!-- start grids_of_3 -->
+	<div class="grids_of_3">
+		<div class="grid1_of_3">
+			<a href="details.html">
+				<img src="images/pic1.jpg" alt="">
+				<h3>even &amp; odd</h3>
+				<span class="price">$145,99</span>
+			</a>
+		</div>
+			<div class="read_more">
+				<a class="btn" href="">It was purchased 4 days ago</a>
+			</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="clear"></div>
+	<!-- start grids_of_3 -->
+	<div class="grids_of_3">
+		<div class="grid1_of_3">
+			<a href="details.html">
+				<img src="images/pic4.jpg" alt="">
+				<h3>buffalo decollete</h3>
+				<span class="price">$145,99</span>
+			</a>
+		</div>
+		<div class="read_more">
+			<a class="btn" href="">It was purchased 4 days ago</a>
+		</div>
+		<div class="clear"></div>
+		
+		
 	</div>
 	<div class="clear"></div>
-</div>
-</div>
-</div>
+
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">
@@ -210,8 +200,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a href="#">Contact us</a></li>
 		</ul>
 		</div>
-	<div class="copy">
-		<p class="link"><span>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
+
 	</div>
 	<div class="clear"></div>
 </div>

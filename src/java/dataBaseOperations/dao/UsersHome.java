@@ -5,9 +5,11 @@
 package dataBaseOperations.dao;
 
 import dataBaseOperations.HibernateUtil;
+import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import tables.Products;
 import tables.ShoppingCart;
 import tables.Users;
@@ -19,10 +21,76 @@ import tables.Users;
 public class UsersHome {
 
     Session session;
+    Transaction transaction;
 
     public UsersHome() {
         session = HibernateUtil.getSessionFactory().openSession();
 
+    }
+    
+    
+      
+    public void openSession() {
+        session = HibernateUtil.getSessionFactory().openSession();
+        transaction = session.getTransaction();
+        transaction.begin();
+    }
+
+    public void closeSession() {
+        transaction.commit();
+        session.close();
+    }
+
+    public boolean activeAccount(int id)
+    {
+        
+        openSession();
+        String hqlquery = "update Users e set e.isActive=1 where e.idusers='"+id+"'";
+        Query query = session.createSQLQuery(hqlquery);
+        query.executeUpdate();
+        closeSession();
+        return true;
+    }
+    
+    
+    
+    public boolean deactiveAccount(int id)
+    {
+        
+        openSession();
+        String hqlquery = "update Users e set e.isActive=0 where e.idusers="+id+"";
+        Query query = session.createSQLQuery(hqlquery);
+        query.executeUpdate();
+        closeSession();
+        return true;
+    }
+    
+  
+    
+    
+public boolean deleteUser(int id)
+    {
+        session.getTransaction().begin();
+        String hql = "delete from users where idusers="+id+"";
+        Query query = session.createSQLQuery(hql);
+        //query.setParameter("employee_id", id);   
+        int result = query.executeUpdate();
+         session.getTransaction().commit();
+        System.out.println("Rows affected: " + result);
+        return true;
+    }    
+    
+    
+    public  List<Users> getUsers()
+    {        
+         ArrayList<Users> users;
+        String hqlQuery = "from Users ";
+        session.getTransaction().begin();
+        Query query = session.createQuery(hqlQuery);
+        users = (ArrayList<Users>) query.list();
+        ///session.getTransaction().commit();
+        return users;
+        
     }
 
     public boolean addOrUpdateUser(Users user) {
@@ -55,23 +123,13 @@ public class UsersHome {
     }
 
     public static void main(String[] args) {
-        Users users = new Users();
-        UsersHome usersHome = new UsersHome();
-        users.setFname("abd1o");
-        users.setLname("tala1at");
-        users.setEmail("sds@s1dkjs.com");
-        users.setCredit(1212);
-        users.setGender("male");
-        users.setMobile("1231223");
-        users.setJob("asdsad");
-        users.setPassword("123");
-        users.setUserType("client");
-        users.setIsActive("1");
-        users.setAddress("assaasas");
+       
 
-        usersHome.addOrUpdateUser(users);
+       
       //  Users  users1 = usersHome.getUser("sds@sdkjs.com", "123");
         //System.out.println(users1.getEmail());
+        UsersHome usersHome = new UsersHome();
+        usersHome.deleteUser(14);
 
 
     }

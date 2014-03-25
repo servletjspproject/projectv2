@@ -4,6 +4,7 @@
  */
 package AccountOperations;
 
+import dataBaseOperations.dao.UsersHome;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -32,7 +33,25 @@ public class ActiveAccount extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-            out.println("1");
+            
+            
+         
+            String id = request.getParameter("userID");
+            int userID = Integer.parseInt(id);
+            UsersHome usersHome = new UsersHome();
+            boolean b = usersHome.activeAccount(userID);
+            if(b)
+            {
+                out.println("2");
+            }
+            else
+            {
+                out.println("1");
+            }
+            
+            
+            
+            
         } finally {            
             out.close();
         }

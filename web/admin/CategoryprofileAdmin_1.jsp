@@ -5,19 +5,18 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<%@taglib prefix="product" uri="/WEB-INF/tlds/category" %>
-
+<%@taglib prefix="category" uri="/WEB-INF/tlds/category" %>
 <html>
 <head>
 <title>The Fooseshoes Website Template | Contact :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
-<script src="../js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -25,8 +24,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="../js/easing.js"></script>
-<script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -42,7 +41,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="../images/logo.png" alt=""/></a>
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -118,7 +117,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="contact_info">
 			    	 	<h3></h3>
 			    	 		<div class="map">
-								<img src="../images/product.png" alt=""></br>
+								<img src="images/product.png" alt=""></br>
 					   		</div>
       				</div>
       			<div class="company_address">
@@ -126,11 +125,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>				
 				<div class="contact_right">
 				  <div class="contact-form">
-				  	<h3>Product Information</h3>
+				  	<h3>Category Information</h3>
 					    <form method="post" action="contact-post.html">
 						
 						<div>
-						    	<span><label>Product Thumbnail</label></span>
+						    	<span><label>Category Thumbnail</label></span>
 											
                                 <input type="file" name="uploadField"/>
 								
@@ -140,7 +139,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								</span>
 						    </div>
 							
-                                                <product:EditProductn id="${param.id}"></product:EditProductn>					
+                                                <category:myCategory></category:myCategory>			
 			
 						   <div>
 						   		<span>

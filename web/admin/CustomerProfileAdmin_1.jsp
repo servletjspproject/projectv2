@@ -5,19 +5,17 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
-<%@taglib prefix="product" uri="/WEB-INF/tlds/category" %>
-
 <html>
 <head>
 <title>The Fooseshoes Website Template | Contact :: w3layouts</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,900,700,500' rel='stylesheet' type='text/css'>
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!--- start-mmmenu-script---->
-<script src="../js/jquery.min.js" type="text/javascript"></script>
-<link type="text/css" rel="stylesheet" href="../css/jquery.mmenu.all.css" />
-<script type="text/javascript" src="../js/jquery.mmenu.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
 		<script type="text/javascript">
 			//	The menu on the left
 			$(function() {
@@ -25,8 +23,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		</script>
 <!-- start top_js_button -->
-<script type="text/javascript" src="../js/easing.js"></script>
-<script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
    <script type="text/javascript">
 		jQuery(document).ready(function($) {
 			$(".scroll").click(function(event){		
@@ -42,7 +40,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="../images/logo.png" alt=""/></a>
+			<a href="index.html"><img src="images/logo.png" alt=""/></a>
 		</div>
 		 <div class="log_reg">
 				<ul>
@@ -72,7 +70,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- start header_btm -->
 <div class="wrap">
 <div class="header_btm">
-		<div class="menu">
+	<div class="menu">
 				<ul>
 				<li><a href="ProductsAdmin.html">Products</a></li>
 				<li><a href="CategoriesAdmin.html">Categories</a></li>
@@ -91,14 +89,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<li><a href="products.html">products</a></li>
 				<li><a href="about.html">about</a></li>
 				<li><a href="index.html">pages</a></li>
-				<li><a href="blog.html">blog</a></li>
+				<li><a href="profile2.html">profile</a></li>
+				<!--<li><a href="blog.html">blog</a></li>-->
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="profile.html">profile</a></li>
 				<div class="clear"></div>
 			</ul>
 		</nav>
 	<div class="header_right">
+		<ul>
 		
+		</ul>
 	</div>
 	<div class="clear"></div>
 </div>
@@ -106,7 +106,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- start top_bg -->
 <div class="top_bg">
 <div class="wrap">
-
+<div class="main_top">
+	<h2 class="style">User's Profile</h2>
+</div>
 </div>
 </div>
 <!-- start main -->
@@ -118,7 +120,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="contact_info">
 			    	 	<h3></h3>
 			    	 		<div class="map">
-								<img src="../images/product.png" alt=""></br>
+								<img src="images/profile.png" alt=""></br>
 					   		</div>
       				</div>
       			<div class="company_address">
@@ -126,26 +128,81 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>				
 				<div class="contact_right">
 				  <div class="contact-form">
-				  	<h3>Product Information</h3>
+				  	<h3>Profile Information</h3>
 					    <form method="post" action="contact-post.html">
-						
-						<div>
-						    	<span><label>Product Thumbnail</label></span>
-											
-                                <input type="file" name="uploadField"/>
-								
-                                
+					    	<div>
+						    	<span><label>First Name</label></span>
 						    	<span>
-
+						<input id="fn" name="userNameProfile" type="text" class="textbox" readOnly="true">
+<input type="button" value="Edit" class="contact-form" onclick="document.getElementById('fn').readOnly=false;">
 								</span>
 						    </div>
-							
-                                                <product:EditProductn id="${param.id}"></product:EditProductn>					
-			
+							<div>
+						    	<span><label>Last Name</label></span>
+						    	<span>
+									<input id="ln" name="userNameProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('ln').readOnly=false;">
+								</span>
+						    </div>
+						    <div>
+						    	<span><label>E-Mail</label></span>
+						    	<span>
+									<input id="em" name="userEmailProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('em').readOnly=false;">
+								</span>
+						    </div>
+						    <div>
+						     	<span><label>Mobile</label></span>
+						    	<span>
+									<input id="mo" name="userPhoneProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('mo').readOnly=false;">
+								</span>
+						    </div>
+						    <div>
+						     	<span><label>Address</label></span>
+						    	<span>
+									<input id="add" name="addressProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('add').readOnly=false;">
+								</span>
+						    </div>
+							<div>
+						    	<span><label>Job</label></span>
+						    	<span>
+									<input id="jo" name="jobProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('jo').readOnly=false;">
+								</span>
+						    </div>
+							<div>
+						    	<span><label>CreditBalance</label></span>
+						    	<span>
+									<input id="cr" name="CreditBalanceProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('cr').readOnly=false;">
+								</span>
+						    </div>
+							<div>
+						    	<span><label>Password</label></span>
+								<span>
+									<input id="pa" name="passwordProfile" type="text" class="textbox" readOnly="true">
+									<input type="button" value="Edit" onclick="document.getElementById('pa').readOnly=false;">
+								</span>
+						    </div>							
+				<div>
+					<label>
+
+					<input type="checkbox" name="interests" value="Heals">Heals<br>
+						<input type="checkbox" name="interests" value="Sandels">Sandels<br>
+						<input type="checkbox" name="interests" value="Boots">Boots<br>
+						<input type="checkbox" name="interests" value="Slippers">Slippers<br>
+						<input type="checkbox" name="interests" value="Flat">Flat<br>
+						<input type="checkbox" name="interests" value="New Comers">New Comers<br>
+						
+					</label>
+
+					</div>
 						   <div>
 						   		<span>
 									<input type="submit" value="Save">
-									<input type="button" value="Cancel">
+									<input type="button" value="Cansel">
 								</span>
 						  </div>
 					    </form>
@@ -160,25 +217,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="footer_mid">
 <div class="wrap">
 <div class="footer">
-	<div class="f_search">
-		<form>
-			<input type="text" value="" placeholder="Enter email for newsletter" />
-			<input type="submit" value=""/>
-		</form>
-	</div>
-	<div class="soc_icons">
-			<ul>
-				<li><a class="icon1" href="#"></a></li>
-				<li><a class="icon2" href="#"></a></li>
-				<li><a class="icon3" href="#"></a></li>
-				<li><a class="icon4" href="#"></a></li>
-				<li><a class="icon5" href="#"></a></li>
-			</ul>	
-	</div>
-	<div class="clear"></div>
-</div>
-</div>
-</div>
 <!-- start footer -->
 <div class="footer_bg">
 <div class="wrap">
@@ -210,9 +248,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a href="#">Contact us</a></li>
 		</ul>
 		</div>
-	<div class="copy">
-		<p class="link"><span>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></span></p>
-	</div>
 	<div class="clear"></div>
 </div>
 </div>
