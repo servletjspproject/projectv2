@@ -16,13 +16,13 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 public class NewTagHandler extends SimpleTagSupport {
 
     /**
-     * Called by the container to invoke this tag. The implementation of this
+     * Called  the container to invoke this tag. The implementation of this
      * method is provided by the tag library developer, and handles all tag
      * processing, body iteration, etc.
      */
     @Override
     public void doTag() throws JspException {
-        JspWriter out = getJspContext().getOut();
+          JspWriter out = getJspContext().getOut();
         
         try {
             // TODO: insert code to write html before writing the body content.
